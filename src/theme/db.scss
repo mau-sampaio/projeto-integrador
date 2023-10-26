@@ -1,5 +1,13 @@
 $primary: #1dbeb4;
+$secondary: #545776;
 $btn-padding-x: 30px;
+$bg-secondary: #ee0000;
 
 @import "../node_modules/bootstrap/scss/bootstrap";
-// etc
+@import "../node_modules/bootstrap/scss/_variables";
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/mixins";
+
+.btn {
+  min-width: 200px;
+}

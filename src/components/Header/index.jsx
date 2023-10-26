@@ -7,6 +7,7 @@ import logoSM from "../../assets/logosm.png";
 import menu from "../../assets/menu.png";
 import { useState } from "react";
 import style from "./header.module.scss";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [show, setShow] = useState(false);
@@ -17,14 +18,14 @@ export default function Header() {
     <>
       <Navbar expand="md" sticky="top" className="bg-body-tertiary">
         <Container>
-          <Navbar.Brand href="#home" className="d-flex gap-2">
+          <Link to="/" className="d-flex gap-2">
             <img
               className="d-none d-md-block"
               src={logoMD}
               alt="Digital Booking"
             />
             <img className="d-md-none" src={logoSM} alt="Digital Booking" />
-          </Navbar.Brand>
+          </Link>
           <button
             onClick={handleShow}
             className={`d-md-none ${style.menuButton}`}
@@ -37,7 +38,9 @@ export default function Header() {
           >
             <Nav className="gap-2">
               <Button variant="outline-primary">Criar Conta</Button>
-              <Button variant="outline-primary">Iniciar sessão</Button>
+              <Link to="/login">
+                <Button variant="outline-primary">Iniciar sessão</Button>
+              </Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
