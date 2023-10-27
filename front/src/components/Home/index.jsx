@@ -1,43 +1,47 @@
-import { Button, Col, Container, Row } from "react-bootstrap";
-import { Calendars } from "../Calendars/index.jsx";
+import { Col, Container, Row } from "react-bootstrap";
+import { CardCategory } from "../CardCategory/CardCategory.jsx";
+import { SectionSearch } from "../SectionSearch/SectionSearch.jsx";
+import { CardProduct } from "../CardProduct/CardProduct.jsx";
 
 export function Home() {
   return (
-    <div className="bg-secondary py-4">
-      <Container>
-        <h1 className="text-white text-center">
-          Buscar ofertas em hotéis, casas e muito mais
-        </h1>
-
+    <div className="flex-1">
+      <div className="bg-secondary py-4">
+        <SectionSearch />
+      </div>
+      <Container className="p-2">
+        <h2 className="text-secondary">Buscar por tipo de acomodação</h2>
         <Row>
-          <Col>
-            <Row>
-              <Col md={6}>
-                <input
-                  className="form-control"
-                  list="datalistOptions"
-                  id="exampleDataList"
-                  placeholder="📌 Para onde vamos?"
-                />
-              </Col>
-              <Col md={6}>
-                <Calendars />
-              </Col>
-            </Row>
+          <Col md={3} className="p-2">
+            <CardCategory />
           </Col>
-          <Col md="auto">
-            <Button>Buscar</Button>
+          <Col md={3} className="p-2">
+            <CardCategory />
+          </Col>
+          <Col md={3} className="p-2">
+            <CardCategory />
+          </Col>
+          <Col md={3} className="p-2">
+            <CardCategory />
           </Col>
         </Row>
-
-        <datalist id="datalistOptions">
-          <option value="San Francisco" />
-          <option value="New York" />
-          <option value="Seattle" />
-          <option value="Los Angeles" />
-          <option value="Chicago" />
-        </datalist>
       </Container>
+      <div className="bg-gray-50 py-2">
+        <Container>
+          <h2 className="text-secondary">Recomendações</h2>
+          <Row>
+            <Col md={6} className="p-2">
+              <CardProduct />
+            </Col>
+            <Col md={6} className="p-2">
+              <CardProduct />
+            </Col>
+            <Col md={6} className="p-2">
+              <CardProduct />
+            </Col>
+          </Row>
+        </Container>
+      </div>
     </div>
   );
 }
