@@ -1,7 +1,7 @@
 import { Col, Container, Row } from "react-bootstrap";
-import { CardCategory } from "../CardCategory/CardCategory.jsx";
-import { SectionSearch } from "../SectionSearch/SectionSearch.jsx";
-import { CardProduct } from "../CardProduct/CardProduct.jsx";
+import { CardCategory } from "../components/CardCategory/CardCategory.jsx";
+import { SectionSearch } from "../components/SectionSearch/SectionSearch.jsx";
+import { CardProduct } from "../components/CardProduct/CardProduct.jsx";
 
 export function Home() {
   return (
