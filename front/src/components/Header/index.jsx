@@ -37,7 +37,9 @@ export default function Header() {
             className="justify-content-end d-none d-md-block "
           >
             <Nav className="gap-2">
-              <Button variant="outline-primary">Criar Conta</Button>
+              <Link to="/cadastro">
+                <Button variant="outline-primary">Criar Conta</Button>
+              </Link>
               <Link to="/login">
                 <Button variant="outline-primary">Iniciar sessão</Button>
               </Link>
