@@ -4,7 +4,7 @@ package br.com.digitalhouse.hotelbackend.app.api.controller;
 import br.com.digitalhouse.hotelbackend.app.api.CategoryApi;
 import br.com.digitalhouse.hotelbackend.app.api.dto.request.CategoryRequest;
 import br.com.digitalhouse.hotelbackend.app.api.dto.response.CategoryDetailedResponse;
-import br.com.digitalhouse.hotelbackend.domain.entity.enums.Category;
+import br.com.digitalhouse.hotelbackend.domain.entity.Category;
 import br.com.digitalhouse.hotelbackend.domain.service.CatetoryService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +13,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.Map;
 
 @RestController
 public class CategoryController implements CategoryApi {
@@ -41,6 +43,20 @@ public class CategoryController implements CategoryApi {
 
         return ResponseEntity.ok(response);
     }
+
+    @Override
+    public ResponseEntity<CategoryDetailedResponse> atualizarClinicaPorId(Long id, Map<String, Object> campos) {
+        Category category = catetoryService.update(id, campos);
+        CategoryDetailedResponse categoryDetailedResponse = categoryDetailedResponse(category);
+        return ResponseEntity.ok().body(categoryDetailedResponse);
+    }
+
+    @Override
+    public ResponseEntity<Void> delete(Long id) {
+        catetoryService.delete(id);
+        return ResponseEntity.noContent().build();
+    }
+
 
     private CategoryDetailedResponse categoryDetailedResponse(Category category) {
         return objectMapper.convertValue(category, CategoryDetailedResponse.class);

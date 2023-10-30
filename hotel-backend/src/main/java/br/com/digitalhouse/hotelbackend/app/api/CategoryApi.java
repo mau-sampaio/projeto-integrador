@@ -7,10 +7,9 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Map;
 
 @RequestMapping("v1/category")
 public interface CategoryApi {
@@ -19,5 +18,10 @@ public interface CategoryApi {
 
     @GetMapping
     ResponseEntity<Page<CategoryDetailedResponse>> findByAll(@PageableDefault Pageable pageable);
+    @PatchMapping("{id}")
+    ResponseEntity<CategoryDetailedResponse> atualizarClinicaPorId(@PathVariable Long id, @RequestBody Map<String, Object> campos);
+
+    @DeleteMapping("{id}")
+    ResponseEntity<Void> delete(@PathVariable Long id);
 
 }
