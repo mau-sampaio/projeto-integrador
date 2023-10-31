@@ -12,16 +12,16 @@ export function Home() {
       <Container className="p-2">
         <h2 className="text-secondary">Buscar por tipo de acomodação</h2>
         <Row>
-          <Col md={3} className="p-2">
+          <Col lg={3} className="p-2">
             <CardCategory />
           </Col>
-          <Col md={3} className="p-2">
+          <Col lg={3} className="p-2">
             <CardCategory />
           </Col>
-          <Col md={3} className="p-2">
+          <Col lg={3} className="p-2">
             <CardCategory />
           </Col>
-          <Col md={3} className="p-2">
+          <Col lg={3} className="p-2">
             <CardCategory />
           </Col>
         </Row>
@@ -30,13 +30,13 @@ export function Home() {
         <Container>
           <h2 className="text-secondary">Recomendações</h2>
           <Row>
-            <Col md={6} className="p-2">
+            <Col lg={6} className="p-2">
               <CardProduct />
             </Col>
-            <Col md={6} className="p-2">
+            <Col lg={6} className="p-2">
               <CardProduct />
             </Col>
-            <Col md={6} className="p-2">
+            <Col lg={6} className="p-2">
               <CardProduct />
             </Col>
           </Row>

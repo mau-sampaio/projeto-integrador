@@ -12,22 +12,34 @@ export function Footer() {
         </div>
         <ul className="d-none d-sm-flex nav col-md-4 justify-content-end list-unstyled">
           <li className="ms-3">
-            <a href="https://getbootstrap.com/docs/5.3/examples/footers/#">
+            <a
+              href="https://getbootstrap.com/docs/5.3/examples/footers/#"
+              target="_blanck"
+            >
               <img src={facebook} alt="Facebook" />
             </a>
           </li>
           <li className="ms-3">
-            <a href="https://getbootstrap.com/docs/5.3/examples/footers/#">
+            <a
+              href="https://getbootstrap.com/docs/5.3/examples/footers/#"
+              target="_blanck"
+            >
               <img src={lkdin} alt="Linkdin" />
             </a>
           </li>
           <li className="ms-3">
-            <a href="https://getbootstrap.com/docs/5.3/examples/footers/#">
+            <a
+              href="https://getbootstrap.com/docs/5.3/examples/footers/#"
+              target="_blanck"
+            >
               <img src={twitter} alt="twitter" />
             </a>
           </li>
           <li className="ms-3">
-            <a href="https://getbootstrap.com/docs/5.3/examples/footers/#">
+            <a
+              href="https://getbootstrap.com/docs/5.3/examples/footers/#"
+              target="_blanck"
+            >
               <img src={instagram} alt="instagram" />
             </a>
           </li>

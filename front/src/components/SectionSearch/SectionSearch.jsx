@@ -10,7 +10,7 @@ export function SectionSearch() {
       <Row>
         <Col>
           <Row>
-            <Col md={6}>
+            <Col lg={6}>
               <input
                 className="form-control"
                 list="datalistOptions"
@@ -18,12 +18,12 @@ export function SectionSearch() {
                 placeholder="📌 Para onde vamos?"
               />
             </Col>
-            <Col md={6}>
+            <Col lg={6}>
               <Calendars />
             </Col>
           </Row>
         </Col>
-        <Col md="auto">
+        <Col lg="auto">
           <Button>Buscar</Button>
         </Col>
       </Row>

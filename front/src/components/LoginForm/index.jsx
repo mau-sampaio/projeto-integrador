@@ -1,8 +1,12 @@
-import { Button, Form, Toast } from "react-bootstrap";
+import { Button, Form, InputGroup } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useState } from "react";
+import hide from "../../assets/hide.png";
+import visible from "../../assets/visible.png";
+import { useToast } from "../../context/useToast";
+import { useNavigate } from "react-router-dom";
 
 const schema = yup.object().shape({
   email: yup.string().email("email invalido").required("email obrigatorio"),
@@ -13,19 +17,36 @@ const schema = yup.object().shape({
 });
 
 export function LoginForm() {
+  const [showPassword, setShowPassword] = useState(false);
+  const { showToast } = useToast();
+  const navigate = useNavigate();
+
   const {
     handleSubmit,
     register,
     formState: { errors },
   } = useForm({ resolver: yupResolver(schema) });
-  const onSubmit = (data) => console.log(data);
-
-  const [show, setShow] = useState(false);
+  const onSubmit = (data) => {
+    if (data.email == "a@a.com" && data.password == "1234567") {
+      navigate("/");
+      showToast({ txt: "Login com Sucesso!", titulo: "Bem vindo" }, "success");
+    } else
+      showToast(
+        {
+          txt: "Por favor, tente novamente, suas credenciais são inválidas!",
+          titulo: "Falha",
+        },
+        "danger",
+      );
+  };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form
+      className="d-flex flex-column align-items-center"
+      onSubmit={handleSubmit(onSubmit)}
+    >
       <div className="w-100">
-        <Form.Group className="mb-3 w-100" controlId="formBasicEmail">
+        <Form.Group className="mb-3 w-100">
           <Form.Label>E-mail</Form.Label>
           <Form.Control
             {...register("email", { required: true })}
@@ -35,34 +56,28 @@ export function LoginForm() {
             {errors.email?.message}
           </Form.Control.Feedback>
         </Form.Group>
-        <Form.Group className="mb-3 w-100" controlId="formBasicPassword">
+        <Form.Group className="mb-3 w-100">
           <Form.Label>Senha</Form.Label>
-          <Form.Control
-            {...register("password", { required: true })}
-            type="password"
-            isInvalid={errors.password}
-          />
-          <Form.Control.Feedback type="invalid">
-            {errors.password?.message}
-          </Form.Control.Feedback>
+          <InputGroup hasValidation>
+            <Form.Control
+              type={showPassword ? "text" : "password"}
+              {...register("password", { required: true })}
+              isInvalid={errors.password}
+            />
+            <button
+              type="button"
+              onClick={() => setShowPassword(!showPassword)}
+              className="iconButton"
+            >
+              <img src={showPassword ? visible : hide} alt="" />
+            </button>
+            <Form.Control.Feedback type="invalid">
+              {errors.password?.message}
+            </Form.Control.Feedback>
+          </InputGroup>
         </Form.Group>
       </div>
-
-      {/* <Toast onClose={() => setShow(false)} show={show} delay={3000} autohide>
-        <Toast.Header>
-          <img src="holder.js/20x20?text=%20" className="rounded me-2" alt="" />
-          <strong className="me-auto">Bootstrap</strong>
-          <small>11 mins ago</small>
-        </Toast.Header>
-        <Toast.Body>Woohoo, youre reading this text in a Toast!</Toast.Body>
-      </Toast> */}
-
-      <Button
-        onClick={() => setShow(true)}
-        variant="primary"
-        className="ml-auto d-block"
-        type="submit"
-      >
+      <Button variant="primary" className="ml-auto d-block" type="submit">
         Entrar
       </Button>
     </form>

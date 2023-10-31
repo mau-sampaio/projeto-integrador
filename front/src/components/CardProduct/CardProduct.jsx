@@ -1,6 +1,7 @@
 import { Button, Card, Col, Row } from "react-bootstrap";
 import card1 from "../../assets/card1.png";
 import star from "../../assets/star.png";
+import { Link } from "react-router-dom";
 
 export function CardProduct() {
   return (
@@ -38,7 +39,7 @@ export function CardProduct() {
                 </Col>
               </Row>
               <p className="fs-7 m-0">
-                📌A 10940m do centro - <a href="">VER NO MAPA</a>
+                📌A 10940m do centro - <Link to="/login">VER NO MAPA</Link>
               </p>
               <div className="mb-3">📶🏊‍♂️</div>
               <p>
