@@ -45,7 +45,7 @@ public class CategoryController implements CategoryApi {
     }
 
     @Override
-    public ResponseEntity<CategoryDetailedResponse> atualizarClinicaPorId(Long id, Map<String, Object> campos) {
+    public ResponseEntity<CategoryDetailedResponse> update(Long id, Map<String, Object> campos) {
         Category category = catetoryService.update(id, campos);
         CategoryDetailedResponse categoryDetailedResponse = categoryDetailedResponse(category);
         return ResponseEntity.ok().body(categoryDetailedResponse);

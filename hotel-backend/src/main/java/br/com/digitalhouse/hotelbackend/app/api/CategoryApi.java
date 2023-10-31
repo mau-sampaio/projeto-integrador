@@ -19,7 +19,7 @@ public interface CategoryApi {
     @GetMapping
     ResponseEntity<Page<CategoryDetailedResponse>> findByAll(@PageableDefault Pageable pageable);
     @PatchMapping("{id}")
-    ResponseEntity<CategoryDetailedResponse> atualizarClinicaPorId(@PathVariable Long id, @RequestBody Map<String, Object> campos);
+    ResponseEntity<CategoryDetailedResponse> update(@PathVariable Long id, @RequestBody Map<String, Object> campos);
 
     @DeleteMapping("{id}")
     ResponseEntity<Void> delete(@PathVariable Long id);

@@ -1,7 +1,8 @@
 package br.com.digitalhouse.hotelbackend.domain.service.impl;
 
 import br.com.digitalhouse.hotelbackend.domain.entity.Category;
-import br.com.digitalhouse.hotelbackend.domain.repository.CategoryRepository;
+import br.com.digitalhouse.hotelbackend.domain.exception.CategoryNotFound;
+import br.com.digitalhouse.hotelbackend.domain.service.impl.repository.CategoryRepository;
 import br.com.digitalhouse.hotelbackend.domain.service.CatetoryService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +30,7 @@ public class CategoryServiceImpl implements CatetoryService {
 
     @Override
     public Category findByID(Long id) {
-        return categoryRepository.findById(id).orElseThrow();
+        return categoryRepository.findById(id).orElseThrow(()-> new CategoryNotFound(id));
     }
 
     @Override
