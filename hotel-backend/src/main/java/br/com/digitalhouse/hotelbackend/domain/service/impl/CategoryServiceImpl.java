@@ -3,7 +3,7 @@ package br.com.digitalhouse.hotelbackend.domain.service.impl;
 import br.com.digitalhouse.hotelbackend.domain.entity.Category;
 import br.com.digitalhouse.hotelbackend.domain.exception.CategoryNotFound;
 import br.com.digitalhouse.hotelbackend.domain.service.impl.repository.CategoryRepository;
-import br.com.digitalhouse.hotelbackend.domain.service.CatetoryService;
+import br.com.digitalhouse.hotelbackend.domain.service.CategoryService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -15,7 +15,7 @@ import java.util.Map;
 
 @Slf4j
 @Service
-public class CategoryServiceImpl implements CatetoryService {
+public class CategoryServiceImpl implements CategoryService {
 
     private CategoryRepository categoryRepository;
     @Autowired
