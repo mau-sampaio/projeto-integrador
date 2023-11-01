@@ -8,7 +8,7 @@ import java.util.Map;
 
 public interface CategoryService {
     Category create(Category category);
-    Category findByID(Long id);
+
     Page<Category> findByall(Pageable pageable);
     Category update(Long id, Map<String, Object>campos);
 

@@ -5,6 +5,8 @@ import br.com.digitalhouse.hotelbackend.app.api.CategoryApi;
 import br.com.digitalhouse.hotelbackend.app.api.dto.request.CategoryRequest;
 import br.com.digitalhouse.hotelbackend.app.api.dto.response.CategoryDetailedResponse;
 import br.com.digitalhouse.hotelbackend.domain.entity.Category;
+import br.com.digitalhouse.hotelbackend.domain.exception.CategoryNotFound;
+import br.com.digitalhouse.hotelbackend.domain.repository.CategoryRepository;
 import br.com.digitalhouse.hotelbackend.domain.service.CategoryService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,8 +15,11 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.ResourceAccessException;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.Map;
+import java.util.UUID;
 
 @RestController
 public class CategoryController implements CategoryApi {
@@ -22,7 +27,7 @@ public class CategoryController implements CategoryApi {
     private final ObjectMapper objectMapper;
 
     @Autowired
-    public CategoryController(CategoryService categoryService, ObjectMapper objectMapper) {
+    public CategoryController(CategoryService categoryService, ObjectMapper objectMapper, CategoryRepository categoryRepository) {
         this.categoryService = categoryService;
         this.objectMapper = objectMapper;
     }
@@ -45,15 +50,14 @@ public class CategoryController implements CategoryApi {
     }
 
     @Override
-    public ResponseEntity<CategoryDetailedResponse> update(Long id, Map<String, Object> campos) {
-        Category category = categoryService.update(id, campos);
-        CategoryDetailedResponse categoryDetailedResponse = categoryDetailedResponse(category);
-        return ResponseEntity.ok().body(categoryDetailedResponse);
+    public ResponseEntity<Void> update(Long categoryId, Map<String, Object> fields) {
+        categoryService.update(categoryId, fields);
+        return ResponseEntity.noContent().build();
     }
 
     @Override
-    public ResponseEntity<Void> delete(Long id) {
-        categoryService.delete(id);
+    public ResponseEntity<Void> delete(Long categoryId) {
+        categoryService.delete(categoryId);
         return ResponseEntity.noContent().build();
     }
 

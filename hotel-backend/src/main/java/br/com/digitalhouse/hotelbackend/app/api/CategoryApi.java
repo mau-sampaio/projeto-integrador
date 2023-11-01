@@ -2,14 +2,17 @@ package br.com.digitalhouse.hotelbackend.app.api;
 
 import br.com.digitalhouse.hotelbackend.app.api.dto.request.CategoryRequest;
 import br.com.digitalhouse.hotelbackend.app.api.dto.response.CategoryDetailedResponse;
+import br.com.digitalhouse.hotelbackend.domain.entity.Category;
 import jakarta.validation.Valid;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
+import java.util.UUID;
 
 @RequestMapping("v1/category")
 public interface CategoryApi {
@@ -18,10 +21,11 @@ public interface CategoryApi {
 
     @GetMapping
     ResponseEntity<Page<CategoryDetailedResponse>> findByAll(@PageableDefault Pageable pageable);
-    @PatchMapping("{id}")
-    ResponseEntity<CategoryDetailedResponse> update(@PathVariable Long id, @RequestBody Map<String, Object> campos);
+    @PatchMapping("{categoryId}")
+    ResponseEntity<Void> update(@PathVariable Long categoryId,
+                                      @RequestBody Map<String, Object> fields);
 
-    @DeleteMapping("{id}")
-    ResponseEntity<Void> delete(@PathVariable Long id);
+    @DeleteMapping("{categoryId}")
+    ResponseEntity<Void> delete(@PathVariable Long categoryId);
 
 }

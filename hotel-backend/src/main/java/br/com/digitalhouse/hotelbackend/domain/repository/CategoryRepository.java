@@ -1,4 +1,4 @@
-package br.com.digitalhouse.hotelbackend.domain.service.impl.repository;
+package br.com.digitalhouse.hotelbackend.domain.repository;
 
 import br.com.digitalhouse.hotelbackend.domain.entity.Category;
 import org.springframework.data.jpa.repository.JpaRepository;
