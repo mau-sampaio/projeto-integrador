@@ -19,6 +19,7 @@ export function ToastsProvider(props) {
     <toastContext.Provider value={{ showToast }}>
       <ToastContainer position="top-end" className="p-3">
         <Toast
+          className="text-light"
           bg={bgColor}
           onClose={() => setShow(false)}
           show={show}

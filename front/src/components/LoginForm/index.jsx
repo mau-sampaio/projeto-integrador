@@ -29,12 +29,12 @@ export function LoginForm() {
   const onSubmit = (data) => {
     if (data.email == "a@a.com" && data.password == "1234567") {
       navigate("/");
-      showToast({ txt: "Login com Sucesso!", titulo: "Bem vindo" }, "success");
+      showToast({ txt: "Login com Sucesso!", titulo: "BEM VINDO" }, "success");
     } else
       showToast(
         {
           txt: "Por favor, tente novamente, suas credenciais são inválidas!",
-          titulo: "Falha",
+          titulo: "FALHA",
         },
         "danger",
       );

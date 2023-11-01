@@ -69,3 +69,13 @@ body {
 .btn:hover {
   color: white;
 }
+
+.bg-cover {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.thumbnail {
+  height: 300px !important ;
+}
