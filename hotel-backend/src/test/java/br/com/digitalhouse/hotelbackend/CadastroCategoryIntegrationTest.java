@@ -1,5 +1,6 @@
 package br.com.digitalhouse.hotelbackend;
 import br.com.digitalhouse.hotelbackend.domain.entity.Category;
+import br.com.digitalhouse.hotelbackend.domain.exception.CategoryNotFound;
 import br.com.digitalhouse.hotelbackend.domain.service.CategoryService;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
@@ -11,9 +12,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.server.LocalServerPort;
 import org.springframework.http.HttpStatus;
 import org.springframework.test.context.ActiveProfiles;
-
-import java.util.NoSuchElementException;
-
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 @ActiveProfiles("test")
@@ -66,7 +64,7 @@ class CadastroCategoryIntegrationTest {
 		novaCategory.setImageUrl("teste");
 		novaCategory.setQualification("teste");
 		novaCategory.setDescription("teste");
-		assertThrows(NoSuchElementException.class, () -> {
+		assertThrows(CategoryNotFound.class, () -> {
 			categoryService.delete(novaCategory.getId());
 		});
 
@@ -90,10 +88,10 @@ class CadastroCategoryIntegrationTest {
 
 		RestAssured.given()
 				.pathParam("categoryId",10)
-				.accept(ContentType.JSON)
+					.accept(ContentType.JSON)
 				.when()
-				.delete("/{categoryId}")
+					.delete("/{categoryId}")
 				.then()
-				.statusCode(HttpStatus.NOT_FOUND.value());
+					.statusCode(HttpStatus.NOT_FOUND.value());
 	}
 }

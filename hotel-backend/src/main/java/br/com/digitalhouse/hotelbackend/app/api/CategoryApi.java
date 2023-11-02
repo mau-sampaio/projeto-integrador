@@ -2,18 +2,15 @@ package br.com.digitalhouse.hotelbackend.app.api;
 
 import br.com.digitalhouse.hotelbackend.app.api.dto.request.CategoryRequest;
 import br.com.digitalhouse.hotelbackend.app.api.dto.response.CategoryDetailedResponse;
-import br.com.digitalhouse.hotelbackend.domain.entity.Category;
 import jakarta.validation.Valid;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
-import java.util.UUID;
-
+@CrossOrigin
 @RequestMapping("v1/category")
 public interface CategoryApi {
     @PostMapping

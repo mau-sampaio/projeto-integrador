@@ -1,8 +1,6 @@
 
 F
 hotel-backend/mvnw.cmd,f\7\f7c9e7b4561605c6ccacf2eea87f405b3f7e3606
-‘
-ahotel-backend/src/main/java/br/com/digitalhouse/hotelbackend/core/jackson/PageJsonSerializer.java,d\c\dc58d6963989733e196494a0168ef608cc1e1e9f
 Ÿ
 ohotel-backend/src/main/java/br/com/digitalhouse/hotelbackend/app/api/dto/response/CategoryDetailedResponse.java,2\7\27ecaf4f6d8bcb6db9429e81dd0907bdccfe0280
 •
