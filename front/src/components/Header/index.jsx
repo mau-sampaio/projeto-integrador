@@ -7,13 +7,17 @@ import logoSM from "../../assets/logosm.png";
 import menu from "../../assets/menu.png";
 import { useState } from "react";
 import style from "./header.module.scss";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Header() {
   const [show, setShow] = useState(false);
+  const local = useLocation();
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  console.log(local);
+
   return (
     <>
       <Navbar expand="md" sticky="top" className="bg-body-tertiary">
@@ -37,10 +41,16 @@ export default function Header() {
             className="justify-content-end d-none d-md-block "
           >
             <Nav className="gap-2">
-              <Button variant="outline-primary">Criar Conta</Button>
-              <Link to="/login">
-                <Button variant="outline-primary">Iniciar sessão</Button>
-              </Link>
+              {local.pathname !== "/cadastro" && (
+                <Link to="/cadastro">
+                  <Button variant="outline-primary">Criar Conta</Button>
+                </Link>
+              )}
+              {local.pathname !== "/login" && (
+                <Link to="/login">
+                  <Button variant="outline-primary">Iniciar sessão</Button>
+                </Link>
+              )}
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -56,8 +66,16 @@ export default function Header() {
         </Offcanvas.Header>
         <Offcanvas.Body>
           <Nav className="gap-2 flex-column">
-            <Button variant="outline-primary">Criar Conta</Button>
-            <Button variant="outline-primary">Iniciar sessão</Button>
+            {local.pathname !== "/cadastro" && (
+              <Link to="/cadastro">
+                <Button variant="outline-primary">Criar Conta</Button>
+              </Link>
+            )}
+            {local.pathname !== "/login" && (
+              <Link to="/login">
+                <Button variant="outline-primary">Iniciar sessão</Button>
+              </Link>
+            )}
           </Nav>
         </Offcanvas.Body>
       </Offcanvas>

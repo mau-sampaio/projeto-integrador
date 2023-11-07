@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "title": "Apartamentos",
+      "img": "https://images.unsplash.com/photo-1512845296467-183ccf124347?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "count": 100
+    },
+    {
+      "title": "Hostels",
+      "img": "https://images.unsplash.com/photo-1630486440513-034ef4480384?auto=format&fit=crop&q=80&w=1966&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "count": 123
+    },
+    {
+      "title": "Hotéis",
+      "img": "https://images.unsplash.com/photo-1545175707-9eec1209f720?auto=format&fit=crop&q=80&w=2080&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "count": 555
+    },
+    {
+      "title": "Resorts",
+      "img": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "count": 404
+    }
+  ]
+}

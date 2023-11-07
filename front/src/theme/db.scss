@@ -1,7 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 $primary: #1dbeb4;
 $secondary: #545776;
 $btn-padding-x: 30px;
 $bg-secondary: #ee0000;
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1500px,
+);
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import "../node_modules/bootstrap/scss/_variables";
@@ -10,4 +19,63 @@ $bg-secondary: #ee0000;
 
 .btn {
   min-width: 200px;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.fs-7 {
+  font-size: 0.875rem;
+}
+
+.bg-gray-50 {
+  background: #d3d3d36a;
+}
+
+.iconButton {
+  width: 46px;
+  min-width: 46px !important;
+  background-color: var(--bs-body-bg);
+  padding: 4px;
+  border: var(--bs-border-width) solid var(--bs-border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--bs-box-shadow-sm) !important;
+
+  img {
+    height: 24px;
+    width: 24px;
+  }
+}
+
+.form-control {
+  box-shadow: var(--bs-box-shadow-sm) !important;
+}
+
+.btn-primary {
+  color: white;
+}
+
+.btn:hover {
+  color: white;
+}
+
+.bg-cover {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.thumbnail {
+  height: 300px !important ;
 }
