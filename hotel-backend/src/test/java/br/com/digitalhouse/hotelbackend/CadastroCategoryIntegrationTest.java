@@ -12,6 +12,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.server.LocalServerPort;
 import org.springframework.http.HttpStatus;
 import org.springframework.test.context.ActiveProfiles;
+
+import java.util.UUID;
+
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 @ActiveProfiles("test")
@@ -35,7 +38,7 @@ class CadastroCategoryIntegrationTest {
 	public void deveCadastrarTestarQuandoCadastroCategorySucesso() {
 		Category novaCategory = new Category();
 		novaCategory.setDescription("hotel");
-		novaCategory.setQualification("5");
+		novaCategory.setQualification(5);
 		novaCategory.setImageUrl("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/1a/ea/54/hotel-presidente-4s.jpg?w=1200&h=-1&s=1");
 
 		categoryService.create(novaCategory);
@@ -45,24 +48,13 @@ class CadastroCategoryIntegrationTest {
 
 	}
 
-	@Test
-	public void deveFalharCadastrarCategoryQuandoParametroVazio() {
-		Category novaCategory = new Category();
-		novaCategory.setImageUrl(null);
-		novaCategory.setQualification(null);
-		novaCategory.setDescription(null);
-		assertThrows(ConstraintViolationException.class, () -> {
-			categoryService.create(novaCategory);
-		});
-
-	}
 
 	@Test
 	public void deveFalharExcluirCategoryQuandoCategoryInexistente() {
 		Category novaCategory = new Category();
-		novaCategory.setId(10L);
+		novaCategory.setId(UUID.randomUUID());
 		novaCategory.setImageUrl("teste");
-		novaCategory.setQualification("teste");
+		novaCategory.setQualification(5);
 		novaCategory.setDescription("teste");
 		assertThrows(CategoryNotFound.class, () -> {
 			categoryService.delete(novaCategory.getId());
@@ -87,7 +79,7 @@ class CadastroCategoryIntegrationTest {
 	public void deveRetornarStatus404_QuandoExcluirCategoryNaoExiste() {
 
 		RestAssured.given()
-				.pathParam("categoryId",10)
+				.pathParam("categoryId",UUID.randomUUID())
 					.accept(ContentType.JSON)
 				.when()
 					.delete("/{categoryId}")

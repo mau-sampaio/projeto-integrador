@@ -15,6 +15,7 @@ import org.springframework.stereotype.Service;
 
 import java.lang.reflect.Field;
 import java.util.Map;
+import java.util.UUID;
 
 import static org.springframework.util.ReflectionUtils.findField;
 import static org.springframework.util.ReflectionUtils.getField;
@@ -44,7 +45,7 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     @Override
-    public Category update(Long id, Map<String, Object> fields) {
+    public Category update(UUID id, Map<String, Object> fields) {
         Category category = categoryRepository.findById(id)
                 .orElseThrow(() -> new CategoryNotFound(id));
         Category input = mapper.convertValue(fields, Category.class);
@@ -64,7 +65,7 @@ public class CategoryServiceImpl implements CategoryService {
 
 
     @Override
-    public void delete(Long id) {
+    public void delete(UUID id) {
         Category category = categoryRepository.findById(id).orElseThrow(()-> new CategoryNotFound(id));
         categoryRepository.delete(category);
     }
