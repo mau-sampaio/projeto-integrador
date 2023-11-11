@@ -3,6 +3,7 @@
 $primary: #1dbeb4;
 $secondary: #545776;
 $btn-padding-x: 30px;
+$bg-primary: #1dbeb4;
 $bg-secondary: #ee0000;
 $container-max-widths: (
   sm: 540px,
@@ -78,4 +79,9 @@ body {
 
 .thumbnail {
   height: 300px !important ;
+}
+
+.fl-end {
+  display: flex;
+  justify-content: flex-end !important;
 }
