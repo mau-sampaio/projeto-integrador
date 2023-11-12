@@ -85,3 +85,30 @@ body {
   display: flex;
   justify-content: flex-end !important;
 }
+
+.custom-button {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  border: 1px solid #ff7e5f;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.custom-button:hover {
+  background: linear-gradient(to right, #feb47b, #ff7e5f);
+}
+
+.overlay-container {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  background-color: rgba(0, 0, 0, 0.638);
+  padding: 10px;
+  color: #fff;
+}

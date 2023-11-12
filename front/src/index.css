@@ -36,3 +36,7 @@ html,
 .rmdp-container {
   width: 100%;
 }
+
+span[aria-live="polite"] {
+  display: flex;
+}
