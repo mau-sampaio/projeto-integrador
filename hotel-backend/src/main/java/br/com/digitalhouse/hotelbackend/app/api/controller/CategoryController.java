@@ -8,7 +8,6 @@ import br.com.digitalhouse.hotelbackend.domain.entity.Category;
 import br.com.digitalhouse.hotelbackend.domain.repository.CategoryRepository;
 import br.com.digitalhouse.hotelbackend.domain.service.CategoryService;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

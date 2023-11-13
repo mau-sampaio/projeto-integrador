@@ -4,7 +4,6 @@ import br.com.digitalhouse.hotelbackend.domain.exception.CategoryNotFound;
 import br.com.digitalhouse.hotelbackend.domain.service.CategoryService;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
-import jakarta.validation.ConstraintViolationException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
