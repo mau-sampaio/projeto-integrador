@@ -49,9 +49,11 @@ export function CardProduct({ urlImg, title, category }) {
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                 Accusantium assumenda
               </p>
-              <Button variant="primary" className="w-100" size="lg">
-                Ver mais
-              </Button>
+              <Link to="/produto" target="_blank">
+                <Button variant="primary" className="w-100" size="lg">
+                  Ver mais
+                </Button>
+              </Link>
             </Card.Body>
           </Col>
         </Row>

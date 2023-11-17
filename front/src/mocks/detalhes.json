@@ -1,0 +1,20 @@
+{
+  "data": {
+    "img": [
+      "https://images.unsplash.com/photo-1515263487990-61b07816b324?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1464306208223-e0b4495a5553?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1582533568805-78a15dcb01b5?q=80&w=1479&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://plus.unsplash.com/premium_photo-1670360414903-19e5832f8bc4?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ],
+    "category": "Resorts",
+    "title": "Praia Serena Apartamentos",
+    "location": {
+      "state": "Buenos Aires",
+      "city": "Cidade Autônoma de Buenos Aires",
+      "country": "Argentina"
+    },
+    "distance": "940 m para o centro",
+    "description": "Está localizado a poucos quarteirões da Avenida Alvear, da Avenida Quintana, do Parque San Martín e do bairro da Recoleta. Existem também vários locais de interesse nas proximidades, como a Rua Florida, o centro comercial Galerías Pacífico, a zona de Puerto Madero, a Plaza de Mayo e o Palácio Municipal. Nossos clientes afirmam que esta parte de Buenos Aires é a sua preferida, segundo avaliações independentes. O Hotel é um sofisticado hotel de 4 estrelas que goza de uma localização tranquila, a poucos passos de prestigiadas galerias de arte, teatros, museus e zonas comerciais. Além disso, há Wi-Fi gratuito. A propriedade serve um pequeno-almoço variado das 07:00h às 10:30h."
+  }
+}
