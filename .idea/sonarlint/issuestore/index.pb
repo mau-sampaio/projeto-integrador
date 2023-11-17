@@ -1,3 +1,27 @@
 
 F
 hotel-backend/mvnw.cmd,f\7\f7c9e7b4561605c6ccacf2eea87f405b3f7e3606
+[
++hotel-backend/src/main/resources/import.sql,0\4\0411160c6cedaff7260f83d190723d1b52f076f2
+õ
+khotel-backend/src/main/java/br/com/digitalhouse/hotelbackend/app/api/handler/GlobalExceptionApiHandler.java,f\7\f7a2d088c56533c8549c08e184cb7eb80c4be6d1
+ü
+ohotel-backend/src/main/java/br/com/digitalhouse/hotelbackend/app/api/dto/response/CategoryDetailedResponse.java,2\7\27ecaf4f6d8bcb6db9429e81dd0907bdccfe0280
+ñ
+fhotel-backend/src/main/java/br/com/digitalhouse/hotelbackend/app/api/dto/response/ProblemResponse.java,4\c\4c73e1b02ac697ef8f8366255f165533642deab2
+ë
+ahotel-backend/src/main/java/br/com/digitalhouse/hotelbackend/core/jackson/PageJsonSerializer.java,d\c\dc58d6963989733e196494a0168ef608cc1e1e9f
+ì
+chotel-backend/src/main/java/br/com/digitalhouse/hotelbackend/domain/exception/CategoryNotFound.java,b\a\bab31a3a8b3f44c23e29e207013461c3053792f2
+î
+dhotel-backend/src/main/java/br/com/digitalhouse/hotelbackend/domain/exception/NotFoundException.java,a\1\a1290386f5a28bb6f2eaefc6644495795d338633
+ñ
+fhotel-backend/src/main/java/br/com/digitalhouse/hotelbackend/domain/repository/CategoryRepository.java,1\e\1ea3866f58c5d003bbb2acee3eb346febb323880
+ô
+ihotel-backend/src/main/java/br/com/digitalhouse/hotelbackend/domain/service/impl/CategoryServiceImpl.java,b\9\b9972735c3b79748dac9b6e9746a8f2045f457e6
+ê
+`hotel-backend/src/main/java/br/com/digitalhouse/hotelbackend/domain/service/CategoryService.java,7\c\7cf2c59533cb69ac4f086e09a1eb6cb7612095e3
+à
+Xhotel-backend/src/main/java/br/com/digitalhouse/hotelbackend/domain/entity/Category.java,d\c\dcb6077fe2f25a86b155f1d35613d78ff80a4802
+â
+Yhotel-backend/src/main/java/br/com/digitalhouse/hotelbackend/HotelBackendApplication.java,2\7\271a4985d2ddeabc6ba3fb4acd673eb27a020a81
