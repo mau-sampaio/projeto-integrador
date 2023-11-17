@@ -15,6 +15,8 @@ import locales from "react-date-object/locales/gregorian_pt_br";
 import { useState } from "react";
 import { GaleryProduct } from "../GaleryProduct/GaleryProduct";
 import MapsApi from "../MapsApi/MapsApi";
+import calendario from "../../assets/calendario.png";
+import GaleryMobile from "../GaleryMobile/GaleryMobile";
 
 export function DetailCard({ place }) {
   const [values, setValues] = useState([new DateObject().subtract(-1, "days")]);
@@ -71,58 +73,60 @@ export function DetailCard({ place }) {
           </Row>
         </Container>
       </div>
+      <div className="d-lg-none pb-4">
+        <GaleryMobile imagens={place.img} />
+      </div>
       <Container>
-        <GaleryProduct imagens={place.img} />
+        <div className="d-none d-lg-block">
+          <GaleryProduct imagens={place.img} />
+        </div>
         <h2>{`Fique no coração de ${place.location.state}`} </h2>
         <p>{place.description}</p>
-
         <h2 className="pt-4">O que esse lugar oferece?</h2>
       </Container>
-      <div className="bg-primary py-1 " />
+      <div className="bg-primary sublinhado" />
       <Container>
         <Row className="text-center pt-4">
-          <Col>
-            <div>
-              <img src={cozinha} alt="icone de cozinha" />
-              <p>Cozinha</p>
-            </div>
+          <Col xs={12} md={6} lg={3}>
+            <img src={cozinha} alt="icone de cozinha" />
+            <p>Cozinha</p>
           </Col>
-          <Col>
+          <Col xs={12} md={6} lg={3}>
             <img src={tv} alt="icone de tv" />
             <p>Televisor</p>
           </Col>
-          <Col>
+          <Col xs={12} md={6} lg={3}>
             <img src={ar} alt="icone de ar" />
             <p>Ar condicionado</p>
           </Col>
-          <Col>
+          <Col xs={12} md={6} lg={3}>
             <img src={pet} alt="icone de pet" />
             <p>Aceita Pets</p>
           </Col>
-        </Row>
-        <Row className="text-center  pt-4">
-          <Col>
+          <Col xs={12} md={6} lg={3}>
             <img src={estacionamento} alt="icone de estacionamento" />
             <p>Estacionamento</p>
           </Col>
-          <Col>
+          <Col xs={12} md={6} lg={3}>
             <img src={piscina} alt="icone de Piscina" />
             <p>Piscina</p>
           </Col>
-          <Col>
+          <Col xs={12} md={6} lg={3}>
             <img src={wifi} alt="icone de Wifi" />
             <p>Wifi</p>
           </Col>
-          <Col>
+          <Col xs={12} md={6} lg={3}>
             <p />
           </Col>
         </Row>
       </Container>
       <div className="bg-gray-50  py-4  ">
-        <Container className="d-flex justify-content-center">
+        <Container>
           <Row>
-            <Col>
+            <Col className="align-items-center d-flex">
               <Calendar
+                className="m-auto custom-calendar"
+                style={{ borderRadius: "8px", fontSize: "20px" }}
                 locale={locales}
                 numberOfMonths={2}
                 disableMonthPicker
@@ -136,21 +140,35 @@ export function DetailCard({ place }) {
               />
             </Col>
             <Col>
-              <div className="bg-secondary p-4 text-white rounded">
+              <div className="bg-white p-4 w-100 rounded">
                 <h3>DATAS SELECIONADAS:</h3>
                 <div>
-                  <div className="rounded bg-gray-50 p-1 text-center border border-black">
-                    <div>{`Check in: ${starDate.day} / ${starDate.month} / ${starDate.year}`}</div>
-                  </div>
-                  <div className="mt-2">
-                    {endDate && (
-                      <div className="rounded bg-gray-50 p-1 b text-center border border-black">{`Check out: ${endDate.day} / ${endDate.month} / ${endDate.year}`}</div>
-                    )}
+                  <Row>
+                    <Col lg="6" className="d-flex align-items-center gap-2">
+                      <img src={calendario} alt="calendario" />
+                      <div>
+                        <p className="m-0">Check-in: </p>
+                        <div>{`${starDate.day} / ${starDate.month} / ${starDate.year}`}</div>
+                      </div>
+                    </Col>
+                    <Col lg="6" className="d-flex align-items-center gap-2">
+                      <img src={calendario} alt="calendario" />
+                      <div>
+                        <p className="m-0">Check-out: </p>
+                        {endDate ? (
+                          <div>{`${endDate.day} / ${endDate.month} / ${endDate.year}`}</div>
+                        ) : (
+                          <span>Data</span>
+                        )}
+                      </div>
+                    </Col>
+                  </Row>
+                  <div className="pt-2 d-flex justify-content-center">
+                    <Button disabled={!starDate || !endDate}>
+                      Adicionar Reserva
+                    </Button>
                   </div>
                 </div>
-              </div>
-              <div className="pt-2 d-flex justify-content-center">
-                <Button>Adicionar Reserva</Button>
               </div>
             </Col>
           </Row>
@@ -159,7 +177,7 @@ export function DetailCard({ place }) {
       <Container>
         <h2 className="pt-4">Onde você vai estar?</h2>
       </Container>
-      <div className="bg-primary py-1 " />
+      <div className="bg-primary sublinhado " />
       <Container>
         <p className="pt-4">{`${place.location.state}, ${place.location.country}`}</p>
         <MapsApi />
@@ -167,29 +185,31 @@ export function DetailCard({ place }) {
       <Container>
         <h2 className="pt-4">O que você precisa saber:</h2>
       </Container>
-      <div className="bg-primary py-1 " />
-      <Container className="d-flex justify-content-between pt-4 ">
-        <div>
-          <h3>Regras da casa</h3>
-          <ul>
-            <li>Check-out: 10:00</li>
-            <li>Não é permitido festas</li>
-            <li>Não fumar</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Saúde e segurança</h3>
-          <ul>
-            <li>Detector de fumaça</li>
-            <li>Depósito de segurança</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Política de cancelamentoa</h3>
-          <ul>
-            <li>Totalmente reembolsável</li>
-          </ul>
-        </div>
+      <div className="bg-primary sublinhado" />
+      <Container>
+        <Row className="pt-4">
+          <Col xs={12} md={6} lg={4}>
+            <h3>Regras da casa</h3>
+            <ul>
+              <li>Check-out: 10:00</li>
+              <li>Não é permitido festas</li>
+              <li>Não fumar</li>
+            </ul>
+          </Col>
+          <Col xs={12} md={6} lg={4}>
+            <h3>Saúde e segurança</h3>
+            <ul>
+              <li>Detector de fumaça</li>
+              <li>Depósito de segurança</li>
+            </ul>
+          </Col>
+          <Col xs={12} md={6} lg={4}>
+            <h3>Política de cancelamentoa</h3>
+            <ul>
+              <li>Totalmente reembolsável</li>
+            </ul>
+          </Col>
+        </Row>
       </Container>
     </>
   );
