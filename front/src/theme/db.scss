@@ -4,7 +4,6 @@ $primary: #1dbeb4;
 $secondary: #545776;
 $btn-padding-x: 30px;
 $bg-primary: #1dbeb4;
-$bg-secondary: #ee0000;
 $container-max-widths: (
   sm: 540px,
   md: 720px,
@@ -117,6 +116,70 @@ body {
   height: 2px;
 }
 
-.custom-calendar {
-  font-size: 20px;
+.avatar {
+  width: 37px;
+  height: 37px;
+  border-radius: 100%;
+  background-color: $secondary;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.custom-drop {
+  text-decoration: none;
+  color: inherit;
+}
+
+.custom-drop::after {
+  display: none;
+}
+
+.customDatePickerWidth {
+  width: 100% !important;
+
+  span {
+    font-size: 18px !important;
+  }
+
+  .rmdp-week-day {
+    text-transform: uppercase;
+  }
+
+  .rmdp-calendar,
+  .rmdp-calendar .rmdp-header,
+  .rmdp-day-picker div {
+    width: 100%;
+  }
+
+  .rmdp-range-hover.end:not(.force),
+  .rmdp-range.end:not(.force) {
+    border-bottom-right-radius: 20px !important;
+    border-top-right-radius: 20px !important;
+  }
+
+  .rmdp-range-hover.start:not(.force),
+  .rmdp-range.start:not(.force) {
+    border-bottom-left-radius: 20px !important;
+    border-top-left-radius: 20px !important;
+  }
+
+  .react-multi-date-picker-calendar span {
+    font-size: 20px !important;
+  }
+
+  .rmdp-day span {
+    border-radius: 20px !important;
+  }
+}
+
+.rmdp-shadow {
+  box-shadow: none !important;
+}
+
+.button-sucesso {
+  max-width: 600px;
+  width: 100%;
 }

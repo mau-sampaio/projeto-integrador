@@ -23,11 +23,11 @@ export function DetailCard({ place }) {
   const [starDate, endDate] = values;
   return (
     <>
-      <div className="bg-secondary py-4 text-white">
+      <div className="bg-secondary py-1 text-white">
         <Container>
           <Row>
             <Col lg={6}>
-              <p>{place.category}</p>
+              <p className="mt-2 mb-0">{place.category}</p>
               <h1>{place.title}</h1>
             </Col>
             <Col
@@ -123,10 +123,9 @@ export function DetailCard({ place }) {
       <div className="bg-gray-50  py-4  ">
         <Container>
           <Row>
-            <Col className="align-items-center d-flex">
+            <Col className="align-items-center d-flex ">
               <Calendar
-                className="m-auto custom-calendar"
-                style={{ borderRadius: "8px", fontSize: "20px" }}
+                className="m-auto react-multi-date-picker-calendar customDatePickerWidth"
                 locale={locales}
                 numberOfMonths={2}
                 disableMonthPicker
@@ -164,9 +163,11 @@ export function DetailCard({ place }) {
                     </Col>
                   </Row>
                   <div className="pt-2 d-flex justify-content-center">
-                    <Button disabled={!starDate || !endDate}>
-                      Adicionar Reserva
-                    </Button>
+                    <Link to="/reserva">
+                      <Button disabled={!starDate || !endDate}>
+                        Adicionar Reserva
+                      </Button>
+                    </Link>
                   </div>
                 </div>
               </div>

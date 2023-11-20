@@ -8,15 +8,16 @@ import menu from "../../assets/menu.png";
 import { useState } from "react";
 import style from "./header.module.scss";
 import { Link, useLocation } from "react-router-dom";
+import { useAuth } from "../../context/useAuth";
+import { Menu } from "./Menu";
 
 export default function Header() {
   const [show, setShow] = useState(false);
   const local = useLocation();
+  const { loggedUser } = useAuth();
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
-  console.log(local);
 
   return (
     <>
@@ -41,15 +42,21 @@ export default function Header() {
             className="justify-content-end d-none d-md-block "
           >
             <Nav className="gap-2">
-              {local.pathname !== "/cadastro" && (
-                <Link to="/cadastro">
-                  <Button variant="outline-primary">Criar Conta</Button>
-                </Link>
-              )}
-              {local.pathname !== "/login" && (
-                <Link to="/login">
-                  <Button variant="outline-primary">Iniciar sessão</Button>
-                </Link>
+              {loggedUser ? (
+                <Menu name={loggedUser.name} lastname={loggedUser.lastname} />
+              ) : (
+                <>
+                  {local.pathname !== "/cadastro" && (
+                    <Link to="/cadastro">
+                      <Button variant="outline-primary">Criar Conta</Button>
+                    </Link>
+                  )}
+                  {local.pathname !== "/login" && (
+                    <Link to="/login">
+                      <Button variant="outline-primary">Iniciar sessão</Button>
+                    </Link>
+                  )}
+                </>
               )}
             </Nav>
           </Navbar.Collapse>
