@@ -5,6 +5,7 @@ import { useState } from "react";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
 
 const schema = yup.object().shape({
   name: yup.string().required("Este campo é obrigatorio"),
@@ -116,9 +117,13 @@ export function CadastroForm() {
           </InputGroup>
         </Form.Group>
       </div>
-      <Button variant="primary" className="ml-auto d-block" type="submit">
-        Criar conta
-      </Button>
+      <div className="ml-auto d-block">
+        <Link to="/cadastro/sucesso">
+          <Button variant="primary" type="submit">
+            Criar conta
+          </Button>
+        </Link>
+      </div>
     </form>
   );
 }

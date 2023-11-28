@@ -10,6 +10,7 @@ import localizador from "../../assets/localizador.png";
 export function DetailReserva({ place }) {
   const [values, setValues] = useState([new DateObject().subtract(-1, "days")]);
   const [starDate, endDate] = values;
+  const [timeCheckin, setTimeCheckin] = useState();
   return (
     <>
       <div className="bg-secondary py-1 text-white">
@@ -39,7 +40,7 @@ export function DetailReserva({ place }) {
                   <h2 className="pt-4 fw-medium fs-3">Complete seus dados</h2>
                   <div className="bg-white p-4 w-100 rounded">
                     <Row>
-                      <Col lg="6" mb-3>
+                      <Col lg="6">
                         <Form.Label>Nome</Form.Label>
                         <Form.Control
                           type="text"
@@ -133,6 +134,9 @@ export function DetailReserva({ place }) {
                           className="w-auto"
                           aria-label="Default select example"
                           required
+                          onChange={(event) => {
+                            setTimeCheckin(event.target.value);
+                          }}
                         >
                           <option key="blankchoice" hidden value>
                             Indique a sua hora prevista de chegada
@@ -165,7 +169,7 @@ export function DetailReserva({ place }) {
                     <Row>
                       <Col lg={12}>
                         <p className="mt-2 mb-0">{place.category}</p>
-                        <h1>{place.title}</h1>
+                        <h2>{place.title}</h2>
                       </Col>
                     </Row>
                     <p className="mb-2">
@@ -204,19 +208,34 @@ export function DetailReserva({ place }) {
                           {endDate ? (
                             <div>{`${endDate.day} / ${endDate.month} / ${endDate.year}`}</div>
                           ) : (
-                            <span>Data</span>
+                            ""
                           )}
                         </Col>
                       </Row>
                       <div className="bg-primary mt-3 sublinhado" />
+
+                      <Row className="mt-3">
+                        <Col lg="6"> Diárias: </Col>
+                        <Col lg="6">
+                          {starDate && endDate
+                            ? endDate.dayOfYear - starDate.dayOfYear
+                            : ""}
+                        </Col>
+                      </Row>
+                      <div className="bg-primary mt-3 sublinhado" />
+                      <Row className="mt-3">
+                        <Col lg="6"> Horario de check-in: </Col>
+                        <Col lg="6">{timeCheckin}</Col>
+                      </Row>
+                      <div className="bg-primary mt-3 sublinhado" />
                     </div>
                     <div className="pt-5 d-flex justify-content-center">
-                      <Link to="/reserva">
-                        <Link to="/sucesso">
-                          <Button disabled={!starDate || !endDate}>
-                            Adicionar Reserva
-                          </Button>
-                        </Link>
+                      <Link to="/reserva/sucesso">
+                        <Button
+                          disabled={!starDate || !endDate || !timeCheckin}
+                        >
+                          Adicionar Reserva
+                        </Button>
                       </Link>
                     </div>
                   </div>

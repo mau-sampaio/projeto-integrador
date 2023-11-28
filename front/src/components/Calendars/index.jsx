@@ -8,6 +8,7 @@ export function Calendars() {
 
   return (
     <DatePicker
+      format="DD/MM/YYYY"
       locale={locales}
       numberOfMonths={2}
       className="react-multi-date-picker-calendar"

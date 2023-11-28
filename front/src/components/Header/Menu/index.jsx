@@ -1,6 +1,7 @@
 import { forwardRef } from "react";
 import { Dropdown } from "react-bootstrap";
 import { useAuth } from "../../../context/useAuth";
+import { Link } from "react-router-dom";
 
 const CustomToggle = ({ children, ...props }, ref) => {
   return (
@@ -19,7 +20,6 @@ export function Menu({ name, lastname }) {
   return (
     <Dropdown>
       <Dropdown.Toggle as={CustomToggleRef}>
-        {" "}
         <div className="d-flex align-items-center justify-content-center gap-2">
           <span className="avatar">
             {name[0]}
@@ -33,9 +33,13 @@ export function Menu({ name, lastname }) {
           </div>
         </div>
       </Dropdown.Toggle>
-
       <Dropdown.Menu>
-        <Dropdown.Item href="#/action-1">Editar Perfil</Dropdown.Item>
+        <Link to="/perfil" className="noUnderline">
+          <Dropdown.Item as="button">Editar Perfil</Dropdown.Item>
+        </Link>
+        <Link to="/minhas-reservas" className="noUnderline">
+          <Dropdown.Item as="button">Minhas Reservas</Dropdown.Item>
+        </Link>
         <Dropdown.Item as="button" onClick={deslogar}>
           Sair
         </Dropdown.Item>
