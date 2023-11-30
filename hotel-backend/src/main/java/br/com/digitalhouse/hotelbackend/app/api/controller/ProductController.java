@@ -3,7 +3,10 @@ package br.com.digitalhouse.hotelbackend.app.api.controller;
 import br.com.digitalhouse.hotelbackend.app.api.ProductApi;
 import br.com.digitalhouse.hotelbackend.app.api.dto.request.ProductRequest;
 import br.com.digitalhouse.hotelbackend.app.api.dto.response.ProductDetaileResponse;
+import br.com.digitalhouse.hotelbackend.domain.entity.Feature;
+import br.com.digitalhouse.hotelbackend.domain.entity.Image;
 import br.com.digitalhouse.hotelbackend.domain.entity.Product;
+import br.com.digitalhouse.hotelbackend.domain.exception.ResourceNotFoundException;
 import br.com.digitalhouse.hotelbackend.domain.service.ProductService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +16,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -42,8 +46,8 @@ public class ProductController implements ProductApi {
                 .map(product -> new ProductDetaileResponse(product.getId(),
                         product.getNome(),
                         product.getDescription(),
-                        product.getFeature(),
-                        product.getImage()
+                        product.getFeatures(),
+                        (List<Image>) product.getImagens()
                 ));
         return ResponseEntity.ok(response);
     }
@@ -59,6 +63,16 @@ public class ProductController implements ProductApi {
     public ResponseEntity<Void> delete(Long id) {
         productService.delete(id);
         return ResponseEntity.noContent().build();
+    }
+
+    @Override
+    public ResponseEntity<List<Product>> findByCategory(Long CategoryId) throws ResourceNotFoundException {
+        return ResponseEntity.ok(productService.findByCategory(CategoryId));
+    }
+
+    @Override
+    public ResponseEntity<List<Product>> findByCity(Long CityId) throws ResourceNotFoundException {
+        return ResponseEntity.ok(productService.findByCity(CityId));
     }
 
     private ProductDetaileResponse productDetaileResponse(Product product) {

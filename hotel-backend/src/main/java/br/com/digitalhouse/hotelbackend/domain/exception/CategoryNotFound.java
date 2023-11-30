@@ -4,7 +4,7 @@ import java.util.UUID;
 
 public class CategoryNotFound extends NotFoundException {
 
-    public CategoryNotFound(UUID id) {
+    public CategoryNotFound(Long id) {
         super("Categoria não encontrado! ID invalido: " + id);
     }
 }

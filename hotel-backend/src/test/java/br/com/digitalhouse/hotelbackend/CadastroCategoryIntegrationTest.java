@@ -16,7 +16,6 @@ import java.util.UUID;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-@ActiveProfiles("test")
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class CadastroCategoryIntegrationTest {
 
@@ -51,7 +50,7 @@ class CadastroCategoryIntegrationTest {
 	@Test
 	public void deveFalharExcluirCategoryQuandoCategoryInexistente() {
 		Category novaCategory = new Category();
-		novaCategory.setId(UUID.randomUUID());
+		novaCategory.setId(1L);
 		novaCategory.setImageUrl("teste");
 		novaCategory.setQualification(5);
 		novaCategory.setDescription("teste");

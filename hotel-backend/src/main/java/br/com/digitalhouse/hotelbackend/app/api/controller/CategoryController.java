@@ -48,13 +48,13 @@ public class CategoryController implements CategoryApi {
     }
 
     @Override
-    public ResponseEntity<Void> update(UUID categoryId, Map<String, Object> fields) {
+    public ResponseEntity<Void> update(Long categoryId, Map<String, Object> fields) {
         categoryService.update(categoryId, fields);
         return ResponseEntity.noContent().build();
     }
 
     @Override
-    public ResponseEntity<Void> delete(UUID categoryId) {
+    public ResponseEntity<Void> delete(Long categoryId) {
         categoryService.delete(categoryId);
         return ResponseEntity.noContent().build();
     }

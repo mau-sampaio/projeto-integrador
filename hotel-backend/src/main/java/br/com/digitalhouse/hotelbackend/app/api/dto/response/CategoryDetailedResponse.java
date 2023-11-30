@@ -3,7 +3,6 @@ package br.com.digitalhouse.hotelbackend.app.api.dto.response;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.UUID;
@@ -14,7 +13,7 @@ import java.util.UUID;
 @AllArgsConstructor
 public class CategoryDetailedResponse {
     @Schema(name = "ID", example = "5263f5a9-3d00-43a8-9a1a-3ea1c015344a")
-    private UUID id;
+    private Long id;
     @Schema(name = "qualification", example = "5")
     private Integer qualification;
     @Schema(name = "description", example = "resort")

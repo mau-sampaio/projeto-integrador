@@ -8,16 +8,3 @@ services:
       MYSQL_DATABASE: "root"
     ports:
       -  "3306:3306"
-
-  keycloak:
-    container_name: adm_hotel_keycloak
-    image: quay.io/keycloak/keycloak:20.0.3
-    environment:
-      - KEYCLOAK_ADMIN=admin
-      - KEYCLOAK_ADMIN_PASSWORD=admin
-      - kEY_DB=mysql
-      - KEY_DB_URL=
-    ports:
-      - 8443:8080
-    command:
-      - start-dev

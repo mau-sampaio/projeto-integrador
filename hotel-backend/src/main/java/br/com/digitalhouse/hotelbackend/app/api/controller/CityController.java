@@ -37,10 +37,10 @@ public class CityController implements CityApi {
     public ResponseEntity<Page<CityDetailesResponse>> findByAll(Pageable pageable) {
         Page<City> cityPageable = cityService.findByAll(pageable);
         Page<CityDetailesResponse> response = cityPageable
-                .map(city -> new CityDetailesResponse(city.getId(),
+                .map(city -> new CityDetailesResponse(
                         city.getNome(),
-                        city.getPais(),
-                        city.getProduct()));
+                        city.getPais()
+    ));
         return ResponseEntity.ok(response);
     }
 

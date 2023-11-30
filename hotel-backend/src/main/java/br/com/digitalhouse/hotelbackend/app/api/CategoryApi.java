@@ -44,7 +44,7 @@ public interface CategoryApi {
     @ApiResponse(responseCode = "500", description = "Erro no servidor")
     @Operation(summary = "Atulizar Category", description = "Atuliza category por parametro")
     @PatchMapping("{categoryId}")
-    ResponseEntity<Void> update(@Parameter(description = "ID de uma Category") @PathVariable UUID categoryId,
+    ResponseEntity<Void> update(@Parameter(description = "ID de uma Category") @PathVariable Long categoryId,
                                 @Parameter(hidden = true) @RequestBody Map<String, Object> fields);
 
     @ApiResponse(responseCode = "204", description = "Sucesso!")
@@ -52,6 +52,6 @@ public interface CategoryApi {
     @ApiResponse(responseCode = "500", description = "Erro no servidor")
     @Operation(summary = "Deleta Category", description = "Deleta category por ID")
     @DeleteMapping("{categoryId}")
-    ResponseEntity<Void> delete(@Parameter(description = "ID de uma Category") @PathVariable UUID categoryId);
+    ResponseEntity<Void> delete(@Parameter(description = "ID de uma Category") @PathVariable Long categoryId);
 
 }

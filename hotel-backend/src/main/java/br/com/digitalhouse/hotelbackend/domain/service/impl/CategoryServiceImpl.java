@@ -45,7 +45,7 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     @Override
-    public Category update(UUID id, Map<String, Object> fields) {
+    public Category update(Long id, Map<String, Object> fields) {
         Category category = categoryRepository.findById(id)
                 .orElseThrow(() -> new CategoryNotFound(id));
         Category input = mapper.convertValue(fields, Category.class);
@@ -65,7 +65,7 @@ public class CategoryServiceImpl implements CategoryService {
 
 
     @Override
-    public void delete(UUID id) {
+    public void delete(Long id) {
         Category category = categoryRepository.findById(id).orElseThrow(()-> new CategoryNotFound(id));
         categoryRepository.delete(category);
     }
