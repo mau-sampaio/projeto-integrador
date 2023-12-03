@@ -1,0 +1,18 @@
+{
+  "data": [
+    {
+      "name": "Mauro",
+      "lastname": "Santos",
+      "email": "mauro@db.com",
+      "password": "M12345Santos",
+      "passwordConfirm": "M12345Santos"
+    },
+    {
+      "name": "Carlos",
+      "lastname": "Silva",
+      "email": "carlos@db.com",
+      "password": "C12345Silva",
+      "passwordConfirm": "M12345Silva"
+    }
+  ]
+}

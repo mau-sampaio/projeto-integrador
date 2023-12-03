@@ -7,6 +7,7 @@ import hide from "../../assets/hide.png";
 import visible from "../../assets/visible.png";
 import { useToast } from "../../context/useToast";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../context/useAuth";
 
 const schema = yup.object().shape({
   email: yup.string().email("email invalido").required("email obrigatorio"),
@@ -20,6 +21,7 @@ export function LoginForm() {
   const [showPassword, setShowPassword] = useState(false);
   const { showToast } = useToast();
   const navigate = useNavigate();
+  const { logar } = useAuth();
 
   const {
     handleSubmit,
@@ -27,7 +29,8 @@ export function LoginForm() {
     formState: { errors },
   } = useForm({ resolver: yupResolver(schema) });
   const onSubmit = (data) => {
-    if (data.email == "a@a.com" && data.password == "1234567") {
+    const loggedUser = logar(data.email, data.password);
+    if (loggedUser) {
       navigate("/");
       showToast({ txt: "Login com Sucesso!", titulo: "BEM VINDO" }, "success");
     } else

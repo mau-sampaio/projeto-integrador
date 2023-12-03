@@ -8,16 +8,17 @@ export function Calendars() {
 
   return (
     <DatePicker
+      format="DD/MM/YYYY"
       locale={locales}
       numberOfMonths={2}
-      className="w-100"
+      className="react-multi-date-picker-calendar"
       value={values}
       onChange={setValues}
       render={(value, openCalendar) => {
         return (
           <Form.Control
-            autocomplete="off"
-            value={value}
+            autoComplete="off"
+            defaultValue={value}
             name="texto"
             aria-describedby="basic-addon1"
             placeholder="Check in - Check out"

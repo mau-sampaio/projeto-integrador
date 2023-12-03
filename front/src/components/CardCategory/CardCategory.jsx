@@ -7,7 +7,7 @@ export function CardCategory({ urlImg, title, count }) {
   const [loading, setLoading] = useState(true);
 
   return (
-    <Link to="/login" class="text-decoration-none">
+    <Link to="/login" className="text-decoration-none">
       <Card className=" shadow">
         <Card.Img
           variant="top"
