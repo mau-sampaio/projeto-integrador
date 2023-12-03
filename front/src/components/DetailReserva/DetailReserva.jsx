@@ -1,5 +1,5 @@
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import arrow from "../../assets/left-arrow.png";
 import { Calendar, DateObject } from "react-multi-date-picker";
 import locales from "react-date-object/locales/gregorian_pt_br";
@@ -11,6 +11,7 @@ export function DetailReserva({ place }) {
   const [values, setValues] = useState([new DateObject().subtract(-1, "days")]);
   const [starDate, endDate] = values;
   const [timeCheckin, setTimeCheckin] = useState();
+  const navigate = useNavigate();
   return (
     <>
       <div className="bg-secondary py-1 text-white">
@@ -37,7 +38,7 @@ export function DetailReserva({ place }) {
             <Col lg="8">
               <Row>
                 <Col lg="12">
-                  <h2 className="pt-4 fw-medium fs-3">Complete seus dados</h2>
+                  <h2 className="pt-4 fw-medium fs-3">Confirme seus dados</h2>
                   <div className="bg-white p-4 w-100 rounded">
                     <Row>
                       <Col lg="6">
@@ -110,6 +111,15 @@ export function DetailReserva({ place }) {
                           minDate={new DateObject().subtract(-1, "days")}
                           maxDate={new DateObject().add(30, "days")}
                           rangeHover
+                          mapDays={({ date }) => {
+                            const disableDays = [12, 14, 15].includes(date.day);
+                            if (disableDays) {
+                              return {
+                                disabled: true,
+                                onClick: () => alert("Dia indisponivel"),
+                              };
+                            }
+                          }}
                         />
                       </Col>
                     </Row>
@@ -230,13 +240,14 @@ export function DetailReserva({ place }) {
                       <div className="bg-primary mt-3 sublinhado" />
                     </div>
                     <div className="pt-5 d-flex justify-content-center">
-                      <Link to="/reserva/sucesso">
-                        <Button
-                          disabled={!starDate || !endDate || !timeCheckin}
-                        >
-                          Adicionar Reserva
-                        </Button>
-                      </Link>
+                      <Button
+                        disabled={!starDate || !endDate || !timeCheckin}
+                        onClick={() => {
+                          navigate("/reserva/sucesso");
+                        }}
+                      >
+                        Adicionar Reserva
+                      </Button>
                     </div>
                   </div>
                 </div>

@@ -1,5 +1,5 @@
 import { Button, Col, Container, Row } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import star from "../../assets/star.png";
 import arrow from "../../assets/left-arrow.png";
 import localizador from "../../assets/localizador.png";
@@ -21,6 +21,7 @@ import GaleryMobile from "../GaleryMobile/GaleryMobile";
 export function DetailCard({ place }) {
   const [values, setValues] = useState([new DateObject().subtract(-1, "days")]);
   const [starDate, endDate] = values;
+  const navigate = useNavigate();
   return (
     <>
       <div className="bg-secondary py-1 text-white">
@@ -163,11 +164,14 @@ export function DetailCard({ place }) {
                     </Col>
                   </Row>
                   <div className="pt-2 d-flex justify-content-center">
-                    <Link to="/reserva">
-                      <Button disabled={!starDate || !endDate}>
-                        Adicionar Reserva
-                      </Button>
-                    </Link>
+                    <Button
+                      disabled={!starDate || !endDate}
+                      onClick={() => {
+                        navigate("/reserva");
+                      }}
+                    >
+                      Adicionar Reserva
+                    </Button>
                   </div>
                 </div>
               </div>
