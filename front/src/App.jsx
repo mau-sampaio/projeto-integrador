@@ -11,6 +11,8 @@ import { UserGuard } from "./guards/UserGuard/UserGuard";
 import { ListaReservas } from "./routes/ListaReservas";
 import { Perfil } from "./routes/Perfil";
 import { Confirmation } from "./components/Confirmation/Confirmation";
+import { CriacaoProduto } from "./routes/CriacaoProduto";
+import { ListaProdutos } from "./routes/ListaProdutos";
 
 function App() {
   return (
@@ -37,7 +39,18 @@ function App() {
                   element={<Confirmation title="Muito Obrigado!" />}
                 />
                 <Route path="/minhas-reservas" element={<ListaReservas />} />
+                <Route path="/meus-produtos" element={<ListaProdutos />} />
                 <Route path="/perfil" element={<Perfil />} />
+                <Route path="/criacao-produto" element={<CriacaoProduto />} />
+                <Route
+                  path="/criacao-produto/sucesso"
+                  element={
+                    <Confirmation
+                      text="Sua propriedade foi criada com sucesso."
+                      btn="Voltar"
+                    />
+                  }
+                />
               </Route>
             </Route>
           </Routes>

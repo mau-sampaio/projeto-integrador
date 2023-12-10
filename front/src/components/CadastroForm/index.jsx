@@ -74,7 +74,6 @@ export function CadastroForm() {
             {errors.email?.message}
           </Form.Control.Feedback>
         </Form.Group>
-
         <Form.Group className="mb-3 w-100">
           <Form.Label>Senha</Form.Label>
           <InputGroup hasValidation>
@@ -95,7 +94,6 @@ export function CadastroForm() {
             </Form.Control.Feedback>
           </InputGroup>
         </Form.Group>
-
         <Form.Group className="mb-3 w-100">
           <Form.Label>Confirmar Senha</Form.Label>
           <InputGroup hasValidation>
