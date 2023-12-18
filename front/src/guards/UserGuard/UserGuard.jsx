@@ -9,7 +9,7 @@ export function UserGuard() {
     if (!loggedUser && ready) {
       navigate("/login");
     }
-  }, [ready]);
+  }, [loggedUser, ready]);
 
   if (!loggedUser) {
     return <></>;

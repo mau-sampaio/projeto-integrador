@@ -16,7 +16,7 @@ const CustomToggle = ({ children, ...props }, ref) => {
 const CustomToggleRef = forwardRef(CustomToggle);
 
 export function Menu({ name, lastname }) {
-  const { deslogar } = useAuth();
+  const { deslogar, loggedUser } = useAuth();
   return (
     <Dropdown>
       <Dropdown.Toggle as={CustomToggleRef}>
@@ -40,6 +40,17 @@ export function Menu({ name, lastname }) {
         <Link to="/minhas-reservas" className="noUnderline">
           <Dropdown.Item as="button">Minhas Reservas</Dropdown.Item>
         </Link>
+        {/* {loggedUser && loggedUser.rolle.includes("adm") && (
+          <Link to="/meus-produtos" className="noUnderline">
+            <Dropdown.Item as="button">Meus Produtos</Dropdown.Item>
+          </Link>
+        )} */}
+        {loggedUser && loggedUser.rolle.includes("adm") && (
+          <Link to="/meus-produtos" className="noUnderline">
+            <Dropdown.Item as="button">Meus Produtos</Dropdown.Item>
+          </Link>
+        )}
+
         <Dropdown.Item as="button" onClick={deslogar}>
           Sair
         </Dropdown.Item>

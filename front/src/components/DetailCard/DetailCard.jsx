@@ -18,7 +18,7 @@ import MapsApi from "../MapsApi/MapsApi";
 import calendario from "../../assets/calendario.png";
 import GaleryMobile from "../GaleryMobile/GaleryMobile";
 
-export function DetailCard({ place }) {
+export function DetailCard({ place, slug }) {
   const [values, setValues] = useState([new DateObject().subtract(-1, "days")]);
   const [starDate, endDate] = values;
   const navigate = useNavigate();
@@ -167,7 +167,7 @@ export function DetailCard({ place }) {
                     <Button
                       disabled={!starDate || !endDate}
                       onClick={() => {
-                        navigate("/reserva");
+                        navigate(`/reserva/${slug}`);
                       }}
                     >
                       Adicionar Reserva
@@ -185,7 +185,7 @@ export function DetailCard({ place }) {
       <div className="bg-primary sublinhado " />
       <Container>
         <p className="pt-4">{`${place.location.state}, ${place.location.country}`}</p>
-        <MapsApi />
+        <MapsApi mapLocation={place.mapLocation} />
       </Container>
       <Container>
         <h2 className="pt-4">O que você precisa saber:</h2>

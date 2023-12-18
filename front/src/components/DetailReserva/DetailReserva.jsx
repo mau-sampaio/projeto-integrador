@@ -6,11 +6,13 @@ import locales from "react-date-object/locales/gregorian_pt_br";
 import { useState } from "react";
 import star from "../../assets/star.png";
 import localizador from "../../assets/localizador.png";
+import { useAuth } from "../../context/useAuth";
 
 export function DetailReserva({ place }) {
   const [values, setValues] = useState([new DateObject().subtract(-1, "days")]);
   const [starDate, endDate] = values;
   const [timeCheckin, setTimeCheckin] = useState();
+  const { loggedUser } = useAuth();
   const navigate = useNavigate();
   return (
     <>
@@ -45,7 +47,7 @@ export function DetailReserva({ place }) {
                         <Form.Label>Nome</Form.Label>
                         <Form.Control
                           type="text"
-                          placeholder="Nome do usuario cadastrado"
+                          placeholder={loggedUser.name}
                           aria-label="Disabled input example"
                           disabled
                           readOnly

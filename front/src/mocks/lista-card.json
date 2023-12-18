@@ -1,60 +1,84 @@
 {
   "data": [
     {
+      "slug": "praia-serena-apartamentos",
       "img": "https://images.unsplash.com/photo-1515263487990-61b07816b324?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "category": "Resorts",
+      "review": 9.4,
       "title": "Praia Serena Apartamentos",
       "location": "Localização 1",
-      "description": "Descrição 1"
+      "distance": "940m para o centro",
+      "description": "Está localizado a poucos quarteirões da Avenida Alvear, da Avenida Quintana, do Parque San Martín e do bairro da Recoleta. Existem também vários locais de interesse nas proximidades, como a Rua Florida, o centro comercial Galerías Pacífico, a zona de Puerto Madero, a Plaza de Mayo e o Palácio Municipal. Nossos clientes afirmam que esta parte de Buenos Aires é a sua preferida, segundo avaliações independentes. O Hotel é um sofisticado hotel de 4 estrelas que goza de uma localização tranquila, a poucos passos de prestigiadas galerias de arte, teatros, museus e zonas comerciais. Além disso, há Wi-Fi gratuito. A propriedade serve um pequeno-almoço variado das 07:00h às 10:30h."
     },
     {
-      "img": "https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "slug": "oasis-resort-spa",
+      "img": "https://images.unsplash.com/photo-1616423841125-8307665a0469?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "category": "Resorts",
+      "review": 7,
       "title": "Oásis Resort & Spa",
       "location": "Localização 2",
-      "description": "Descrição 2"
+      "distance": "Distância do mar: 50 metros",
+      "description": "O Oásis Resort & Spa é um hotel 5 estrelas localizado no Egito, na cidade de Sharm ElSheikh. O resort está situado em uma bela praia privativa, com águas cristalinas e areia branca. O Oásis Resort & Spa oferece uma ampla gama de acomodações, incluindo quartos, suítes e villas. Todos os quartos são espaçosos e confortáveis, e oferecem uma vista deslumbrante do mar ou do jardim."
     },
     {
-      "img": "https://images.unsplash.com/photo-1586214601498-4dbcfd0bf2c8?auto=format&fit=crop&q=80&w=1935&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "slug": "cidade-charme-hotel",
+      "img": "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "category": "Hotel",
-      "title": "Cidade Charme Hotel",
+      "review": 8,
+      "title": "Charmante Ville Hotel",
       "location": "Localização 3",
-      "description": "Descrição 3"
+      "distance": "Distância do centro: 250 metros",
+      "description": "O Charmante Ville esta localizado no coração de Paris, França. Ohotel está situado a poucos passos do Louvre, da Torre Eiffel e de outros pontos turísticos famosos. O Charmante Ville Hotel oferece uma ampla gama de acomodações luxuosas, incluindo quartos, suítes e apartamentos."
     },
     {
-      "img": "https://images.unsplash.com/photo-1629794226066-349748040fb7?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "slug": "vila-sossego-hotel",
+      "img": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "category": "Hotel",
-      "title": "Sol & Sossego Apart-Hotel",
+      "review": 7,
+      "title": "Sol & Sossego Hotel",
       "location": "Localização 4",
-      "description": "Descrição 4"
+      "distance": "Distância do centro: 15min",
+      "description": "O Sol & Sossego Apart-Hotel é um luxo localizado em Albufeira, Portugal.O hotel está situado a apenas 50 metros da praia e a 10 minutos a pé do centro da cidade."
     },
     {
+      "slug": "vila-ondas-hostel",
       "img": "https://images.unsplash.com/photo-1455587734955-081b22074882?auto=format&fit=crop&q=80&w=1920&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "category": "Hostels",
-      "title": "Vila das Ondas Resort",
+      "review": 10,
+      "title": "Vila das Ondas Hostel",
       "location": "Localização 5",
-      "description": "Descrição 5"
+      "distance": "Distância do centro: 50min",
+      "description": "No 3º andar do Forma Itaim, elegante e espaçoso, possui varanda confortável e conta com áreas de lazer e todos os serviços de luxo que o prédio oferece: Sky Pool e Solarium no 25º andar, Fitness no 13º andar com vista, panorâmica, Club Lounge com vista para a cidade no 13º andar, Piscina coberta com raia de 25 metros, Sauna úmida e seca, Sala de massagem, Quadra de Squash, Concierge Bilíngue, Tabela de basquete com garrafão, Lobby com área de leitura e sala de estar, Salão de festas, Lavanderia coletiva."
     },
     {
-      "img": "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "slug": "pousada-parque-montanhas",
+      "img": "https://images.unsplash.com/photo-1615880484746-a134be9a6ecf?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "category": "Hostels",
-      "title": "Pousada Parque das Montanhas",
+      "review": 10,
+      "title": "Pousada das Montanhas",
       "location": "Localização 6",
-      "description": "Descrição 6"
+      "distance": "Distância do centr: 9,5 km",
+      "description": "O Mountain Park Hostel é um albergue acessível localizado na cidade de Arizona, Estados Unidos. O albergue está situado no coração da natureza, cercado por montanhas e florestas. A localização do albergue é perfeita para quem procura uma experiência de imersão na natureza. Os hóspedes podem desfrutar de caminhadas, camping, pesca e outras atividades ao ar livre. O albergue também está localizado a uma curta distância de carro de muitas atrações populares da cidade, incluindo o Grand Canyon, o Monumento Nacional do Monte Rushmore e o Parque Nacional de Yellowstone. O Mountain Park Hostel oferece uma variedade de quartos para atender às necessidades de todos os hóspedes. Os quartos são bem mobiliados e podem acomodar de 4 a 8 pessoas. O albergue também possui áreas comuns espaçosas e relaxantes, com áreas de estar confortáveis e acesso gratuito à Internet Wi-Fi. O albergue também serve refeições tradicionais da região, incluindo churrasco, tacos e burritos. Os hóspedes podem desfrutar de refeições deliciosas no restaurante do albergue ou cozinhar suas próprias refeições na cozinha compartilhada. O Mountain Park Hostel é um ótimo lugar para relaxar e explorar a beleza natural do Arizona. O albergue oferece acomodações confortáveis, acesso fácil a atrações e comida deliciosa."
     },
     {
+      "slug": "apartamento-aventura",
       "img": "https://images.unsplash.com/photo-1561501900-3701fa6a0864?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "category": "Apartamento",
+      "review": 10,
       "title": "Apartamento da Aventura",
       "location": "Localização 7",
-      "description": "Descrição 7"
+      "distance": "Distância do centr: 6,5 km",
+      "description": "Seja bem-vindo ao nosso estúdio acolhedor, perfeito para uma escapadela a dois! Este espaço encantador acomoda confortavelmente até 2 pessoas e oferece todas as comodidades que você precisa para uma estadia relaxante. O estúdio é equipado com uma cama de casal padrão, garantindo noites de sono tranquilas. Além disso, o ar-condicionado split mantém a temperatura ideal, e a TV e o Wi-Fi estão disponíveis para o seu entretenimento e conveniência."
     },
     {
-      "img": "https://images.unsplash.com/photo-1617859047452-8510bcf207fd?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "slug": "apartamento-estacia-luxo",
+      "img": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "category": "Apartamento",
+      "review": 10,
       "title": "Apartamento Estância Luxo",
       "location": "Localização 8",
-      "description": "Descrição 8"
+      "distance": "Distância do centr: 2km",
+      "description": "Seja bem-vindo ao nosso estúdio acolhedor, perfeito para uma escapadela a dois! Este espaço encantador acomoda confortavelmente até 2 pessoas e oferece todas as comodidades que você precisa para uma estadia relaxante. O estúdio é equipado com uma cama de casal padrão, garantindo noites de sono tranquilas. Além disso, o ar-condicionado split mantém a temperatura ideal, e a TV e o Wi-Fi estão disponíveis para o seu entretenimento e conveniência."
     }
   ]
 }

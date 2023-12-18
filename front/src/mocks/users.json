@@ -4,13 +4,15 @@
       "name": "Mauro",
       "lastname": "Santos",
       "email": "mauro@db.com",
-      "password": "M12345Santos"
+      "password": "M12345Santos",
+      "rolle": ["adm", "user"]
     },
     {
       "name": "Carlos",
       "lastname": "Silva",
       "email": "carlos@db.com",
-      "password": "C12345Silva"
+      "password": "C12345Silva",
+      "rolle": ["user"]
     }
   ]
 }

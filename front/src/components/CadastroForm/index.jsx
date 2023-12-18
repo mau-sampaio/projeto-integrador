@@ -30,7 +30,9 @@ export function CadastroForm() {
     register,
     formState: { errors },
   } = useForm({ resolver: yupResolver(schema) });
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = () => {
+    <Link to="/cadastro/sucesso" />;
+  };
 
   return (
     <form
@@ -74,7 +76,6 @@ export function CadastroForm() {
             {errors.email?.message}
           </Form.Control.Feedback>
         </Form.Group>
-
         <Form.Group className="mb-3 w-100">
           <Form.Label>Senha</Form.Label>
           <InputGroup hasValidation>
@@ -95,7 +96,6 @@ export function CadastroForm() {
             </Form.Control.Feedback>
           </InputGroup>
         </Form.Group>
-
         <Form.Group className="mb-3 w-100">
           <Form.Label>Confirmar Senha</Form.Label>
           <InputGroup hasValidation>
@@ -118,11 +118,9 @@ export function CadastroForm() {
         </Form.Group>
       </div>
       <div className="ml-auto d-block">
-        <Link to="/cadastro/sucesso">
-          <Button variant="primary" type="submit">
-            Criar conta
-          </Button>
-        </Link>
+        <Button variant="primary" type="submit">
+          Criar conta
+        </Button>
       </div>
     </form>
   );

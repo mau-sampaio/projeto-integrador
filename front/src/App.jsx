@@ -11,6 +11,9 @@ import { UserGuard } from "./guards/UserGuard/UserGuard";
 import { ListaReservas } from "./routes/ListaReservas";
 import { Perfil } from "./routes/Perfil";
 import { Confirmation } from "./components/Confirmation/Confirmation";
+import { CriacaoProduto } from "./routes/CriacaoProduto";
+import { ListaProdutos } from "./routes/ListaProdutos";
+import { Sobre } from "./routes/Sobre";
 
 function App() {
   return (
@@ -22,6 +25,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/login" element={<Login />} />
               <Route path="/cadastro" element={<Cadastro />} />
+              <Route path="/sobre" element={<Sobre />} />
               <Route
                 path="/cadastro/sucesso"
                 element={
@@ -29,15 +33,26 @@ function App() {
                 }
               />
               {/* <Route path="/produto/:id" element={<Detail />} /> */}
-              <Route path="/produto" element={<Produto />} />
-              <Route path="/reserva" element={<Reserva />} />
+              <Route path="/produto/:slug" element={<Produto />} />
               <Route path="" element={<UserGuard />}>
+                <Route path="/reserva/:slug" element={<Reserva />} />
                 <Route
                   path="/reserva/sucesso"
                   element={<Confirmation title="Muito Obrigado!" />}
                 />
                 <Route path="/minhas-reservas" element={<ListaReservas />} />
+                <Route path="/meus-produtos" element={<ListaProdutos />} />
                 <Route path="/perfil" element={<Perfil />} />
+                <Route path="/criacao-produto" element={<CriacaoProduto />} />
+                <Route
+                  path="/criacao-produto/sucesso"
+                  element={
+                    <Confirmation
+                      text="Sua propriedade foi criada com sucesso."
+                      btn="Voltar"
+                    />
+                  }
+                />
               </Route>
             </Route>
           </Routes>

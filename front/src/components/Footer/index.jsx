@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import facebook from "../../assets/facebook.png";
 import instagram from "../../assets/instagram.png";
 import lkdin from "../../assets/lkdin.png";
@@ -10,6 +11,9 @@ export function Footer() {
         <div className="col-md-4 d-flex align-items-center">
           <span>© 2023 / Digital Booking</span>
         </div>
+        <Link to="/sobre" className="text-white text-decoration-none">
+          Sobre a DigitalBooking.com
+        </Link>
         <ul className="d-none d-sm-flex nav col-md-4 justify-content-end list-unstyled">
           <li className="ms-3">
             <a
