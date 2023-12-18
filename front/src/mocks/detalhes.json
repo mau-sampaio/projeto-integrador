@@ -1,20 +1,196 @@
 {
-  "data": {
-    "img": [
-      "https://images.unsplash.com/photo-1515263487990-61b07816b324?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "https://images.unsplash.com/photo-1464306208223-e0b4495a5553?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "https://images.unsplash.com/photo-1582533568805-78a15dcb01b5?q=80&w=1479&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "https://plus.unsplash.com/premium_photo-1670360414903-19e5832f8bc4?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    ],
-    "category": "Resorts",
-    "title": "Praia Serena Apartamentos",
-    "location": {
-      "state": "Buenos Aires",
-      "city": "Cidade Autônoma de Buenos Aires",
-      "country": "Argentina"
+  "data": [
+    {
+      "slug": "praia-serena-apartamentos",
+      "img": [
+        "https://images.unsplash.com/photo-1515263487990-61b07816b324?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1464306208223-e0b4495a5553?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1582533568805-78a15dcb01b5?q=80&w=1479&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://plus.unsplash.com/premium_photo-1670360414903-19e5832f8bc4?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      ],
+      "category": "Resorts",
+      "review": "9,4",
+      "title": "Praia Serena Apartamentos",
+      "location": {
+        "state": "Buenos Aires",
+        "city": "Cidade Autônoma de Buenos Aires",
+        "country": "Argentina"
+      },
+      "mapLocation": {
+        "lat": -34.60941476725957,
+        "lng": -58.3858213450193
+      },
+      "distance": "940 m para o centro",
+      "description": "Está localizado a poucos quarteirões da Avenida Alvear, da Avenida Quintana, do Parque San Martín e do bairro da Recoleta. Existem também vários locais de interesse nas proximidades, como a Rua Florida, o centro comercial Galerías Pacífico, a zona de Puerto Madero, a Plaza de Mayo e o Palácio Municipal. Nossos clientes afirmam que esta parte de Buenos Aires é a sua preferida, segundo avaliações independentes. O Hotel é um sofisticado hotel de 4 estrelas que goza de uma localização tranquila, a poucos passos de prestigiadas galerias de arte, teatros, museus e zonas comerciais. Além disso, há Wi-Fi gratuito. A propriedade serve um pequeno-almoço variado das 07:00h às 10:30h."
     },
-    "distance": "940 m para o centro",
-    "description": "Está localizado a poucos quarteirões da Avenida Alvear, da Avenida Quintana, do Parque San Martín e do bairro da Recoleta. Existem também vários locais de interesse nas proximidades, como a Rua Florida, o centro comercial Galerías Pacífico, a zona de Puerto Madero, a Plaza de Mayo e o Palácio Municipal. Nossos clientes afirmam que esta parte de Buenos Aires é a sua preferida, segundo avaliações independentes. O Hotel é um sofisticado hotel de 4 estrelas que goza de uma localização tranquila, a poucos passos de prestigiadas galerias de arte, teatros, museus e zonas comerciais. Além disso, há Wi-Fi gratuito. A propriedade serve um pequeno-almoço variado das 07:00h às 10:30h."
-  }
+    {
+      "slug": "oasis-resort-spa",
+      "img": [
+        "https://images.unsplash.com/photo-1616423841125-8307665a0469?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1535205148555-bcbbc2a78913?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1549109783-6be1845ed596?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1549109786-eb80da56e693?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1617200645924-20d20ed1b2d3?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      ],
+      "category": "Resorts",
+      "review": 7,
+      "title": "Oásis Resort & Spa",
+      "location": {
+        "state": " Luxor Governorate",
+        "city": "Sharm El Sheikh",
+        "country": "Egito"
+      },
+      "mapLocation": {
+        "lat": 27.944701969107612,
+        "lng": 34.3814292424167
+      },
+      "distance": "Distância do mar: 50 metros",
+      "description": "O Oásis Resort & Spa esta localizado no Egito, na cidade de Sharm El Sheikh. O resort está situado em uma bela praia privativa, com águas cristalinas e areia branca. O Oásis Resort & Spa oferece uma ampla gama de acomodações, incluindo quartos, suítes e villas. Todos os quartos são espaçosos e confortáveis, e oferecem uma vista deslumbrante do mar ou do jardim."
+    },
+    {
+      "slug": "cidade-charme-hotel",
+      "img": [
+        "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1471623432079-b009d30b6729?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1564540579594-0930edb6de43?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1541123437800-1bb1317badc2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      ],
+      "category": "Hotel",
+      "review": 8,
+      "title": "Cidade Charme Hotel",
+      "location": {
+        "state": "Versalhes",
+        "city": "Paris",
+        "country": "França"
+      },
+      "mapLocation": {
+        "lat": 48.80664007738564,
+        "lng": 2.1252885768776766
+      },
+      "distance": "Distância do centro: 250 metros",
+      "description": "O Charmante Ville Hotel esta localizado no coração de Paris, França. O hotel está situado a poucos passos do Louvre, da Torre Eiffel e de outros pontos turísticos famosos. O Charmante Ville Hotel oferece uma ampla gama de acomodações luxuosas, incluindo quartos, suítes e apartamentos. Todos os quartos são espaçosos e confortáveis, e oferecem uma decoração elegante e sofisticada. O hotel também oferece uma variedade de comodidades e serviços, incluindo: um spa de última geração com uma variedade de tratamentos, um centro de fitness com equipamentos de última geração, três restaurantes que servem uma variedade de pratos da cozinha internacional, dois bares que oferecem uma seleção de bebidas e coquetéis, um serviço de concierge 24 horas.O Cidade Charme Hotel é o destino perfeito para quem procura uma estadia luxuosa e confortável em Paris. O hotel oferece tudo o que você precisa para uma experiência inesquecível na Cidade Luz."
+    },
+    {
+      "slug": "vila-sossego-hotel",
+      "img": [
+        "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1633893737773-af3bcb339e59?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1629794226066-349748040fb7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1619810230359-b2c2f61c49cd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1547371890-cd66a3dcf386?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      ],
+      "category": "Hotel",
+      "review": 7,
+      "title": "Sol & Sossego Hotel",
+      "location": {
+        "city": "Praia da Oura",
+        "state": "Albufeira",
+        "country": "Portugal"
+      },
+      "mapLocation": {
+        "lat": 37.09447069216925,
+        "lng": -8.239102720359847
+      },
+      "distance": "Distância do centro: 15 minutos a pé",
+      "description": "O Sol & Sossego Apart-Hotel é um luxo localizado em Albufeira, Portugal.O hotel está situado a apenas 50 metros da praia e a 10 minutos a pé do centro da cidade. O hotel oferece uma ampla gama de acomodações, incluindo apartamentos de um, dois e três quartos. Todos os apartamentos são espaçosos e confortáveis, e oferecem uma decoração elegante e moderna. O hotel também oferece uma variedade de comodidades e serviços, incluindo: uma piscina exterior com vista para o mar, um spa com uma variedade de tratamentos, um centro de fitness, três restaurantes que servem uma variedade de pratos da cozinha internacional, dois bares que oferecem uma seleção de bebidas e coquetéis."
+    },
+    {
+      "slug": "vila-ondas-hostel",
+      "img": [
+        "https://images.unsplash.com/photo-1455587734955-081b22074882?auto=format&fit=crop&q=80&w=1920&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1662672323044-c5491444c340?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1515094193635-40722cc342b3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1466228432269-af42b400b934?q=80&w=2128&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1489171078254-c3365d6e359f?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      ],
+      "category": "Hostels",
+      "review": 7,
+      "title": "Vila das Ondas Hostel",
+      "location": {
+        "city": "Itaim Paulista",
+        "state": "São Paulo",
+        "country": "Brasil"
+      },
+      "mapLocation": {
+        "lat": -23.45774571925391,
+        "lng": -46.41064914080852
+      },
+      "distance": "Distância do centro: 15 minutos a pé",
+      "description": "No 3º andar do Forma Itaim, elegante e espaçoso, possui varanda confortável e conta com áreas de lazer e todos os serviços de luxo que o prédio oferece: Sky Pool e Solarium no 25º andar, Fitness no 13º andar com vista, panorâmica, Club Lounge com vista para a cidade no 13º andar, Piscina coberta com raia de 25 metros, Sauna úmida e seca, Sala de massagem, Quadra de Squash, Concierge Bilíngue, Tabela de basquete com garrafão, Lobby com área de leitura e sala de estar, Salão de festas, Lavanderia coletiva."
+    },
+    {
+      "slug": "pousada-parque-montanhas",
+      "img": [
+        "https://images.unsplash.com/photo-1615880484746-a134be9a6ecf?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1606456817825-a0a0d88ae727?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1561409037-c7be81613c1f?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      ],
+      "category": "Hostels",
+      "review": 10,
+      "title": "Pousada Parque das Montanhas",
+      "location": {
+        "city": "Yellowstone",
+        "state": "Roanoke",
+        "country": "EUA"
+      },
+      "mapLocation": {
+        "lat": 37.23474653461846,
+        "lng": -79.94134036236893
+      },
+      "distance": "Distância do centr: 9,5 km",
+      "description": "O Mountain Park Hostel é um albergue acessível localizado na cidade de Arizona, Estados Unidos. O albergue está situado no coração da natureza, cercado por montanhas e florestas. A localização do albergue é perfeita para quem procura uma experiência de imersão na natureza. Os hóspedes podem desfrutar de caminhadas, camping, pesca e outras atividades ao ar livre. O albergue também está localizado a uma curta distância de carro de muitas atrações populares da cidade, incluindo o Grand Canyon, o Monumento Nacional do Monte Rushmore e o Parque Nacional de Yellowstone. O Mountain Park Hostel oferece uma variedade de quartos para atender às necessidades de todos os hóspedes. Os quartos são bem mobiliados e podem acomodar de 4 a 8 pessoas. O albergue também possui áreas comuns espaçosas e relaxantes, com áreas de estar confortáveis e acesso gratuito à Internet Wi-Fi. O albergue também serve refeições tradicionais da região, incluindo churrasco, tacos e burritos. Os hóspedes podem desfrutar de refeições deliciosas no restaurante do albergue ou cozinhar suas próprias refeições na cozinha compartilhada. O Mountain Park Hostel é um ótimo lugar para relaxar e explorar a beleza natural do Arizona. O albergue oferece acomodações confortáveis, acesso fácil a atrações e comida deliciosa."
+    },
+    {
+      "slug": "apartamento-aventura",
+      "img": [
+        "https://images.unsplash.com/photo-1561501900-3701fa6a0864?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=1980&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      ],
+      "category": "Apartamento",
+      "review": 10,
+      "title": "Apartamento da Aventura",
+      "location": {
+        "city": "Pompeia",
+        "state": "Napoles",
+        "country": "Italia"
+      },
+      "mapLocation": {
+        "lat": 40.72913051985187,
+        "lng": 14.492055596203485
+      },
+      "distance": "Distância do centr: 6,5 km",
+      "description": "Seja bem-vindo ao nosso estúdio acolhedor, perfeito para uma escapadela a dois! Este espaço encantador acomoda confortavelmente até 2 pessoas e oferece todas as comodidades que você precisa para uma estadia relaxante. O estúdio é equipado com uma cama de casal padrão, garantindo noites de sono tranquilas. Além disso, o ar-condicionado split mantém a temperatura ideal, e a TV e o Wi-Fi estão disponíveis para o seu entretenimento e conveniência."
+    },
+    {
+      "slug": "apartamento-estacia-luxo",
+      "img": [
+        "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1560448205-17d3a46c84de?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1554995207-c18c203602cb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1585412727339-54e4bae3bbf9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1596204976717-1a9ff47f74ef?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      ],
+      "mapLocation": {
+        "lat": 39.434365816199815,
+        "lng": 22.94743041721034
+      },
+      "category": "Apartamento",
+      "review": 10,
+      "title": "Apartamento Estância Luxo",
+      "location": {
+        "city": "Makrinitsa",
+        "state": "Vólos",
+        "country": "Grécia"
+      },
+      "distance": "Distância do centr: 6,5 km",
+      "description": "Seja bem-vindo ao nosso estúdio acolhedor, perfeito para uma escapadela a dois! Este espaço encantador acomoda confortavelmente até 2 pessoas e oferece todas as comodidades que você precisa para uma estadia relaxante. O estúdio é equipado com uma cama de casal padrão, garantindo noites de sono tranquilas. Além disso, o ar-condicionado split mantém a temperatura ideal, e a TV e o Wi-Fi estão disponíveis para o seu entretenimento e conveniência."
+    }
+  ]
 }

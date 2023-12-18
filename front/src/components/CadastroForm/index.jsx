@@ -30,7 +30,9 @@ export function CadastroForm() {
     register,
     formState: { errors },
   } = useForm({ resolver: yupResolver(schema) });
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = () => {
+    <Link to="/cadastro/sucesso" />;
+  };
 
   return (
     <form
@@ -116,11 +118,9 @@ export function CadastroForm() {
         </Form.Group>
       </div>
       <div className="ml-auto d-block">
-        <Link to="/cadastro/sucesso">
-          <Button variant="primary" type="submit">
-            Criar conta
-          </Button>
-        </Link>
+        <Button variant="primary" type="submit">
+          Criar conta
+        </Button>
       </div>
     </form>
   );

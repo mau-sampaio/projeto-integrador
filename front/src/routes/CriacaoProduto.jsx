@@ -11,30 +11,35 @@ import pet from "../assets/itens/contem-pet.png";
 import tv from "../assets/itens/contem-tv.png";
 import wifi from "../assets/itens/contem-wifi.png";
 import piscina from "../assets/itens/piscina.png";
+import { useState } from "react";
 
 const schema = yup.object().shape({
   name: yup.string().required("Este campo é obrigatorio"),
   category: yup.string().required("Este campo é obrigatorio"),
-  email: yup.string().email("email invalido").required("email obrigatorio"),
-  password: yup
-    .string()
-    .min(7, "A senha deve ter mais que 6 caracteres.")
-    .required("senha obrigatoria"),
-  confirmPassword: yup
-    .string()
-    .min(7, "A senha deve ter mais que 6 caracteres.")
-    .oneOf([yup.ref("password"), null], "As senhas devem ser iguais")
-    .required("senha obrigatoria"),
 });
-const onSubmit = (data) => console.log(data);
 
 export function CriacaoProduto() {
   const navigate = useNavigate();
+  const [imageFields, setImageFields] = useState([""]);
+
+  const handleAddField = () => {
+    setImageFields([...imageFields, ""]);
+  };
+
+  const handleRemoveField = (index) => {
+    const updatedFields = [...imageFields];
+    updatedFields.splice(index, 1);
+    setImageFields(updatedFields);
+  };
+
   const {
     handleSubmit,
     register,
     formState: { errors },
   } = useForm({ resolver: yupResolver(schema) });
+  const onSubmit = () => {
+    navigate("/criacao-produto/sucesso");
+  };
 
   return (
     <>
@@ -315,26 +320,54 @@ export function CriacaoProduto() {
             <Row>
               <Col lg="12">
                 <h2 className="pt-4 fw-medium fs-3 ">Carregar imagens</h2>
+
                 <div className="bg-white p-4 w-100 rounded">
-                  <Form.Group controlId="formFile" className="mb-3">
-                    <Form.Label>Carregar as fotos do produto</Form.Label>
-                    <Col>
-                      <Form.Control
-                        placeholder="Insira a URL da imagem"
-                        {...register("img", { required: true })}
-                        isInvalid={errors.img}
-                      />
-                    </Col>
-                  </Form.Group>
+                  <Form onSubmit={handleSubmit(onSubmit)}>
+                    {imageFields.map((image, index) => (
+                      <div key={index} className="mb-3">
+                        <Form.Group controlId={`formFile${index}`}>
+                          <Form.Label>{`URL da imagem ${
+                            index + 1
+                          }`}</Form.Label>
+                          <Form.Control
+                            placeholder="Insira a URL da imagem"
+                            {...register(`img[${index}]`, { required: true })}
+                            isInvalid={errors.img && errors.img[index]}
+                          />
+                          <Form.Control.Feedback type="invalid">
+                            {errors.img && errors.img[index]?.message}
+                          </Form.Control.Feedback>
+                        </Form.Group>
+                        {index === imageFields.length - 1 && (
+                          <div className="text-right pt-2">
+                            <Button
+                              variant="danger"
+                              type="button"
+                              onClick={() => handleRemoveField(index)}
+                            >
+                              Remover
+                            </Button>
+                          </div>
+                        )}
+                      </div>
+                    ))}
+
+                    <div className="ml-auto d-flex justify-content-center">
+                      <Button
+                        variant="primary"
+                        type="button"
+                        className="fs-5"
+                        onClick={handleAddField}
+                      >
+                        Adicionar mais imagens
+                      </Button>
+                    </div>
+                  </Form>
                 </div>
               </Col>
             </Row>
             <div className="p-5 d-flex justify-content-center">
-              <Button
-                onClick={() => {
-                  navigate("/criacao-produto/sucesso");
-                }}
-              >
+              <Button className="fs-4" type="submit">
                 Criar Produto
               </Button>
             </div>

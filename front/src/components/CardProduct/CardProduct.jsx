@@ -2,7 +2,16 @@ import { Button, Card, Col, Row } from "react-bootstrap";
 import star from "../../assets/star.png";
 import { Link } from "react-router-dom";
 
-export function CardProduct({ urlImg, title, category }) {
+export function CardProduct({
+  urlImg,
+  title,
+  category,
+  description,
+  slug,
+  distance,
+  review,
+}) {
+  const stars = Math.floor(review / 2) || 5;
   return (
     <>
       <Card className="overflow-hidden">
@@ -23,11 +32,10 @@ export function CardProduct({ urlImg, title, category }) {
               <Row className="mb-3">
                 <Col className="pe-0">
                   <p className="m-0">
-                    {category} <img src={star} alt="" />
-                    <img src={star} alt="" />
-                    <img src={star} alt="" />
-                    <img src={star} alt="" />
-                    <img src={star} alt="" />
+                    <span className="pe-2">{category}</span>
+                    {Array.from(Array(stars)).map((_, index) => (
+                      <img src={star} alt="" key={index} />
+                    ))}
                   </p>
                   <h3>{title}</h3>
                 </Col>
@@ -36,20 +44,20 @@ export function CardProduct({ urlImg, title, category }) {
                   className="ps-0 d-flex flex-column align-items-end"
                 >
                   <span className="bg-secondary px-3 rounded text-white py-1">
-                    8
+                    {review}
                   </span>
-                  <Card.Text>Muito bom</Card.Text>
+                  <Card.Text>{review > 7 ? "Muito Bom" : "Bom"}</Card.Text>
                 </Col>
               </Row>
               <p className="fs-7 m-0">
-                📌A 10940m do centro - <Link to="/login">VER NO MAPA</Link>
+                📌 {distance} -
+                <Link to={`/produto/${slug}`} target="_blank">
+                  VER NO MAPA
+                </Link>
               </p>
               <div className="mb-3">📶🏊‍♂️</div>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Accusantium assumenda
-              </p>
-              <Link to="/produto" target="_blank">
+              <p className="description">{description}</p>
+              <Link to={`/produto/${slug}`} target="_blank">
                 <Button variant="primary" className="w-100" size="lg">
                   Ver mais
                 </Button>

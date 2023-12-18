@@ -46,7 +46,7 @@ export function Menu({ name, lastname }) {
           </Link>
         )} */}
         {loggedUser && loggedUser.rolle.includes("adm") && (
-          <Link to="/criacao-produto" className="noUnderline">
+          <Link to="/meus-produtos" className="noUnderline">
             <Dropdown.Item as="button">Meus Produtos</Dropdown.Item>
           </Link>
         )}

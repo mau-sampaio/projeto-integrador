@@ -38,6 +38,10 @@ export function Home() {
                     category={hospedagem.category}
                     urlImg={hospedagem.img}
                     title={hospedagem.title}
+                    description={hospedagem.description}
+                    slug={hospedagem.slug}
+                    distance={hospedagem.distance}
+                    review={hospedagem.review}
                   />
                 </Col>
               );

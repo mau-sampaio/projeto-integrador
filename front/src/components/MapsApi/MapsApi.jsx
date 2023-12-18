@@ -6,13 +6,7 @@ const containerStyle = {
   height: "600px",
 };
 
-// ARGENTINA
-const center = {
-  lat: -34.60941476725957,
-  lng: -58.3858213450193,
-};
-
-function MapsApi() {
+function MapsApi({ mapLocation }) {
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
     googleMapsApiKey: "AIzaSyBirMiXllc-qsYzLgMG_9ofQ658eWknZsI",
@@ -22,10 +16,10 @@ function MapsApi() {
     <GoogleMap
       mapContainerClassName="rounded shadow "
       mapContainerStyle={containerStyle}
-      center={center}
+      center={mapLocation}
       zoom={17}
     >
-      <Marker position={center} />
+      <Marker position={mapLocation} />
       <></>
     </GoogleMap>
   ) : (
